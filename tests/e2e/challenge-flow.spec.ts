@@ -31,3 +31,15 @@ test("challenge checkbox can be toggled and persisted", async ({ page }) => {
   await page.reload();
   await expect(weeklyTask).toBeChecked();
 });
+
+test("checking a task checkbox increases the tab progress rate", async ({ page }) => {
+  await page.goto("/");
+
+  const weeklyTab = page.getByRole("tab", { name: /今週の達成スコア/ });
+  await expect(weeklyTab).toContainText("0/2 (0%)");
+
+  const weeklyTask = page.getByRole("checkbox", { name: "週間スコア 5000 到達" });
+  await weeklyTask.check();
+
+  await expect(weeklyTab).toContainText("1/2 (50%)");
+});
