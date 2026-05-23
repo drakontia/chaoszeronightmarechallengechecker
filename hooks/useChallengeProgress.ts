@@ -6,37 +6,30 @@ import { getAchievedTaskIds, LOCAL_STORAGE_KEY } from "@/lib";
 
 export const useChallengeProgress = (tasks: ChallengeTask[]) => {
   const [checkedTaskIds, setCheckedTaskIds] = useState<string[]>([]);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     const raw = window.localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (!raw) {
-      return;
-    }
-
-    try {
-      const parsed = JSON.parse(raw) as unknown;
-      if (!Array.isArray(parsed)) {
-        return;
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw) as unknown;
+        if (Array.isArray(parsed)) {
+          const restored = parsed.filter(
+            (value): value is string => typeof value === "string",
+          );
+          setCheckedTaskIds(restored);
+        }
+      } catch {
+        window.localStorage.removeItem(LOCAL_STORAGE_KEY);
       }
-
-      const restored = parsed.filter(
-        (value): value is string => typeof value === "string",
-      );
-      const frameId = window.requestAnimationFrame(() => {
-        setCheckedTaskIds(restored);
-      });
-
-      return () => {
-        window.cancelAnimationFrame(frameId);
-      };
-    } catch {
-      window.localStorage.removeItem(LOCAL_STORAGE_KEY);
     }
+    setIsHydrated(true);
   }, []);
 
   useEffect(() => {
+    if (!isHydrated) return;
     window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(checkedTaskIds));
-  }, [checkedTaskIds]);
+  }, [isHydrated, checkedTaskIds]);
 
   const achievedTaskIds = useMemo(
     () => getAchievedTaskIds(tasks, checkedTaskIds),
