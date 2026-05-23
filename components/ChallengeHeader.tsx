@@ -12,9 +12,13 @@ export function ChallengeHeader() {
       </div>
 
       <div className="flex items-center gap-4 self-start">
-        <span className="rounded-full border border-amber-300 bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-900">
-          Sponsor
-        </span>
+        <iframe
+          src="https://github.com/sponsors/drakontia/button"
+          title="Sponsor drakontia"
+          height="32"
+          width="114"
+          style={{ border: 0, borderRadius: "6px" }}
+        />
         <Link
           href="https://x.com/MhdenOfRamuh"
           target="_blank"
