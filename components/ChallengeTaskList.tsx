@@ -28,7 +28,7 @@ export function ChallengeTaskList({
           return (
             <li
               key={task.id}
-              className={`grid grid-cols-[auto,1fr,84px,96px] items-center gap-3 rounded-lg border border-zinc-200 p-3 ${
+              className={`grid grid-cols-[auto_1fr_84px_96px] items-center gap-3 rounded-lg border border-zinc-200 p-3 ${
                 achieved ? "bg-emerald-50" : "bg-white"
               }`}
             >
