@@ -1,0 +1,65 @@
+{
+  "site": {
+    "title": "カオスゼロナイトメア挑戦課題チェッカー",
+    "description": "シーズンごとの挑戦課題の達成状況をチェックしてローカルに保存できる攻略補助サイトです。",
+    "xLink": "@MhdenOfRamuh のXアカウント"
+  },
+  "season": {
+    "s3": "シーズン3「銀河に響く歌声」"
+  },
+  "tabs": {
+    "ariaLabel": "挑戦課題カテゴリ",
+    "weeklyScore": "今週の達成スコア",
+    "missionLog": "任務記録",
+    "chaosAnalysis": "カオス究明",
+    "battleReport": "戦闘報告",
+    "annihilation": "壊滅作戦"
+  },
+  "tasks": {
+    "section": "挑戦課題一覧",
+    "derivedNotice": "下位課題をすべて達成すると完了します",
+    "weekly1": {
+      "title": "週間スコア 5000 到達",
+      "description": "今週のプレイで合計スコア5000を達成する"
+    },
+    "weekly2": {
+      "title": "週間スコア 10000 到達",
+      "description": "今週のプレイで合計スコア10000を達成する"
+    },
+    "mission1": {
+      "title": "任務を5件完了",
+      "description": "任務記録カテゴリの任務を5件達成する"
+    },
+    "analysis1": {
+      "title": "カオス断片を3種収集",
+      "description": "探索でカオス断片を3種類集める"
+    },
+    "battle1": {
+      "title": "ボス戦を2回勝利",
+      "description": "戦闘報告カテゴリでボス戦勝利を2回記録する"
+    },
+    "annihilationChild1": {
+      "title": "壊滅作戦: 前衛突破",
+      "description": "壊滅作戦で前衛部隊を撃破する"
+    },
+    "annihilationChild2": {
+      "title": "壊滅作戦: 中枢制圧",
+      "description": "壊滅作戦で中枢エリアを制圧する"
+    },
+    "annihilationParent": {
+      "title": "壊滅作戦 完全達成",
+      "description": "壊滅作戦の下位課題をすべて達成する"
+    }
+  },
+  "progress": {
+    "single": "0/1",
+    "done": "達成済み",
+    "derived": "自動判定"
+  },
+  "rewards": {
+    "crystal": "クリスタル",
+    "coin": "コイン",
+    "ticket": "補給チケット",
+    "chip": "解析チップ"
+  }
+}
