@@ -44,24 +44,23 @@ export function ChallengeCheckerPage() {
     [activeTab, season.categories],
   );
 
-  const cycleSeason = () => {
-    const currentIndex = seasons.findIndex((value) => value.id === seasonId);
-    const nextIndex = (currentIndex + 1) % seasons.length;
-    setSeasonId(seasons[nextIndex].id);
-  };
-
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-8 md:px-8">
       <ChallengeHeader />
 
       <section className="space-y-6">
-        <button
-          type="button"
-          onClick={cycleSeason}
-          className="text-left text-3xl font-bold tracking-tight text-zinc-900 transition hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+        <select
+          value={seasonId}
+          onChange={(e) => setSeasonId(e.target.value)}
+          aria-label={t("season.selectorLabel")}
+          className="cursor-pointer rounded-lg border border-zinc-200 bg-white px-3 py-2 text-3xl font-bold tracking-tight text-zinc-900 shadow-sm transition hover:border-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
         >
-          {t(season.nameKey)}
-        </button>
+          {seasons.map((s) => (
+            <option key={s.id} value={s.id}>
+              {t(s.nameKey)}
+            </option>
+          ))}
+        </select>
 
         <div className="flex flex-col gap-4 md:flex-row md:items-start">
           <ChallengeSidebar
