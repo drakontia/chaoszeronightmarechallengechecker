@@ -43,18 +43,20 @@ export function ChallengeTaskList({
                 disabled={isDerived}
               />
 
-              <div className={task.id.includes("child") ? "pl-5" : ""}>
+              <div className={task.isChild ? "pl-5" : ""}>
                 <p className="text-base font-semibold text-zinc-900">{t(task.titleKey)}</p>
                 <p className="text-sm text-zinc-600">{t(task.descriptionKey)}</p>
                 {isDerived && <p className="text-xs text-indigo-700">{t("tasks.derivedNotice")}</p>}
               </div>
 
               <div className="flex justify-center">
-                <Image src={task.rewardImage} alt={t(task.rewardAltKey)} width={56} height={56} />
+                {task.rewardImage && task.rewardAltKey && (
+                  <Image src={task.rewardImage} alt={t(task.rewardAltKey)} width={56} height={56} />
+                )}
               </div>
 
               <p className="text-sm font-medium text-zinc-700">
-                {isDerived ? t(task.progressKey) : manuallyChecked ? t("progress.done") : t(task.progressKey)}
+                {isDerived ? t("progress.derived") : manuallyChecked ? t("progress.done") : `0/${task.progressMax ?? 1}`}
               </p>
             </li>
           );
