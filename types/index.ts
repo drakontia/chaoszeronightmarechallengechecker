@@ -12,9 +12,10 @@ export interface ChallengeTask {
   status: ChallengeStatus;
   titleKey: string;
   descriptionKey: string;
-  rewardImage: string;
-  rewardAltKey: string;
-  progressKey: string;
+  rewardImage?: string;
+  rewardAltKey?: string;
+  progressMax?: number;
+  isChild?: boolean;
   childIds?: string[];
 }
 

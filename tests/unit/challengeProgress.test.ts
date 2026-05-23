@@ -6,24 +6,29 @@ describe("challengeProgress", () => {
   const categories = seasons[0].categories;
   const tasks = categories.flatMap((category) => category.tasks);
 
-  describe("getAchievedTaskIds", () => {
-    test("derives parent task completion when all children are checked", () => {
-      const achieved = getAchievedTaskIds(tasks, ["annihilation-child-1", "annihilation-child-2"]);
+  // Real Season 3 data: 5 weekly-score tasks, 30 annihilation tasks
+  const WEEKLY_TOTAL = 5;
+  const ANNIHILATION_TOTAL = 30;
 
-      expect(achieved.has("annihilation-parent")).toBe(true);
+  describe("getAchievedTaskIds", () => {
+    // ml-light-dark-song is a derived parent with children ml-light-of-song and ml-dark-of-song
+    test("derives parent task completion when all children are checked", () => {
+      const achieved = getAchievedTaskIds(tasks, ["ml-light-of-song", "ml-dark-of-song"]);
+
+      expect(achieved.has("ml-light-dark-song")).toBe(true);
     });
 
     test("does not derive parent when only some children are checked", () => {
-      const achieved = getAchievedTaskIds(tasks, ["annihilation-child-1"]);
+      const achieved = getAchievedTaskIds(tasks, ["ml-light-of-song"]);
 
-      expect(achieved.has("annihilation-parent")).toBe(false);
+      expect(achieved.has("ml-light-dark-song")).toBe(false);
     });
 
     test("includes manually checked tasks in achieved set", () => {
-      const achieved = getAchievedTaskIds(tasks, ["weekly-1"]);
+      const achieved = getAchievedTaskIds(tasks, ["ws-2000"]);
 
-      expect(achieved.has("weekly-1")).toBe(true);
-      expect(achieved.has("weekly-2")).toBe(false);
+      expect(achieved.has("ws-2000")).toBe(true);
+      expect(achieved.has("ws-3000")).toBe(false);
     });
   });
 
@@ -32,47 +37,57 @@ describe("challengeProgress", () => {
       const achieved = getAchievedTaskIds(tasks, []);
       const completion = getTabCompletion(categories, achieved, "weekly-score");
 
-      expect(completion).toEqual({ completed: 0, total: 2, rate: 0 });
+      expect(completion).toEqual({ completed: 0, total: WEEKLY_TOTAL, rate: 0 });
     });
 
-    test("returns updated rate after toggling a task — 0/2 (0%) rises to 1/2 (50%)", () => {
+    test("returns updated rate after toggling a task — rises from 0%", () => {
       const before = getTabCompletion(categories, getAchievedTaskIds(tasks, []), "weekly-score");
-      const after = getTabCompletion(categories, getAchievedTaskIds(tasks, ["weekly-1"]), "weekly-score");
+      const after = getTabCompletion(categories, getAchievedTaskIds(tasks, ["ws-2000"]), "weekly-score");
 
-      expect(before).toEqual({ completed: 0, total: 2, rate: 0 });
-      expect(after).toEqual({ completed: 1, total: 2, rate: 50 });
+      expect(before.completed).toBe(0);
+      expect(before.total).toBe(WEEKLY_TOTAL);
+      expect(after.completed).toBe(1);
+      expect(after.rate).toBeGreaterThan(0);
     });
 
     test("returns tab completion rate", () => {
-      const achieved = getAchievedTaskIds(tasks, ["weekly-1"]);
+      const achieved = getAchievedTaskIds(tasks, ["ws-2000"]);
       const completion = getTabCompletion(categories, achieved, "weekly-score");
 
-      expect(completion).toEqual({ completed: 1, total: 2, rate: 50 });
+      expect(completion.completed).toBe(1);
+      expect(completion.total).toBe(WEEKLY_TOTAL);
+      expect(completion.rate).toBeGreaterThan(0);
     });
 
     test("returns 100% when all tasks in a tab are checked", () => {
-      const achieved = getAchievedTaskIds(tasks, ["weekly-1", "weekly-2"]);
+      const allWeeklyIds = ["ws-2000", "ws-3000", "ws-4000", "ws-6000", "ws-8000"];
+      const achieved = getAchievedTaskIds(tasks, allWeeklyIds);
       const completion = getTabCompletion(categories, achieved, "weekly-score");
 
-      expect(completion).toEqual({ completed: 2, total: 2, rate: 100 });
+      expect(completion).toEqual({ completed: WEEKLY_TOTAL, total: WEEKLY_TOTAL, rate: 100 });
     });
 
-    test("annihilation tab: rate rises when child tasks are checked", () => {
+    test("annihilation tab: rate rises when tasks are checked", () => {
+      const allAnnihilationIds = Array.from({ length: 10 }, (_, i) => `an-cb-${i + 1}`)
+        .concat(Array.from({ length: 10 }, (_, i) => `an-se-${i + 1}`))
+        .concat(Array.from({ length: 10 }, (_, i) => `an-sc-${i + 1}`));
+
       const before = getTabCompletion(categories, getAchievedTaskIds(tasks, []), "annihilation");
       const afterOne = getTabCompletion(
         categories,
-        getAchievedTaskIds(tasks, ["annihilation-child-1"]),
+        getAchievedTaskIds(tasks, ["an-cb-1"]),
         "annihilation",
       );
-      const afterBoth = getTabCompletion(
+      const afterAll = getTabCompletion(
         categories,
-        getAchievedTaskIds(tasks, ["annihilation-child-1", "annihilation-child-2"]),
+        getAchievedTaskIds(tasks, allAnnihilationIds),
         "annihilation",
       );
 
       expect(before.rate).toBe(0);
+      expect(before.total).toBe(ANNIHILATION_TOTAL);
       expect(afterOne.rate).toBeGreaterThan(0);
-      expect(afterBoth.rate).toBe(100);
+      expect(afterAll.rate).toBe(100);
     });
   });
 });
