@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { ChallengeCategory, ChallengeTab, TabCompletion } from "@/types";
 import { ProgressRate } from "@/components/ui";
