@@ -18,7 +18,7 @@ export function ChallengeTaskList({
   const t = useTranslations();
 
   return (
-    <section className="w-full rounded-xl border border-zinc-200 bg-white p-4 shadow-sm" aria-label={t("tasks.section") }>
+    <section className="w-full rounded-xl border border-zinc-200 bg-white p-4 shadow-sm" aria-label={t("tasks.section")}>
       <ul className="space-y-3">
         {tasks.map((task) => {
           const achieved = achievedTaskIds.has(task.id);
