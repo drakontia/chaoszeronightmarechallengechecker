@@ -5,26 +5,35 @@ import { ChallengeTask } from "@/types";
 import { getAchievedTaskIds, LOCAL_STORAGE_KEY } from "@/lib";
 
 export const useChallengeProgress = (tasks: ChallengeTask[]) => {
-  const [checkedTaskIds, setCheckedTaskIds] = useState<string[]>(() => {
-    if (typeof window === "undefined") {
-      return [];
-    }
+  const [checkedTaskIds, setCheckedTaskIds] = useState<string[]>([]);
 
+  useEffect(() => {
     const raw = window.localStorage.getItem(LOCAL_STORAGE_KEY);
     if (!raw) {
-      return [];
+      return;
     }
 
     try {
       const parsed = JSON.parse(raw) as unknown;
-      return Array.isArray(parsed)
-        ? parsed.filter((value): value is string => typeof value === "string")
-        : [];
+      if (!Array.isArray(parsed)) {
+        return;
+      }
+
+      const restored = parsed.filter(
+        (value): value is string => typeof value === "string",
+      );
+      const frameId = window.requestAnimationFrame(() => {
+        setCheckedTaskIds(restored);
+      });
+
+      return () => {
+        window.cancelAnimationFrame(frameId);
+      };
     } catch {
       window.localStorage.removeItem(LOCAL_STORAGE_KEY);
-      return [];
+      return;
     }
-  });
+  }, []);
 
   useEffect(() => {
     window.localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(checkedTaskIds));

@@ -9,7 +9,6 @@ export type ChallengeStatus = "manual" | "derived";
 
 export interface ChallengeTask {
   id: string;
-  category: ChallengeCategory;
   status: ChallengeStatus;
   titleKey: string;
   descriptionKey: string;
@@ -19,10 +18,15 @@ export interface ChallengeTask {
   childIds?: string[];
 }
 
+export interface SeasonCategory {
+  id: ChallengeCategory;
+  tasks: ChallengeTask[];
+}
+
 export interface Season {
   id: string;
   nameKey: string;
-  tasks: ChallengeTask[];
+  categories: SeasonCategory[];
 }
 
 export interface ChallengeTab {

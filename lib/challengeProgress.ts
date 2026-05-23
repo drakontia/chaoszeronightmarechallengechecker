@@ -1,4 +1,9 @@
-import { ChallengeCategory, ChallengeTask, TabCompletion } from "@/types";
+import {
+  ChallengeCategory,
+  ChallengeTask,
+  SeasonCategory,
+  TabCompletion,
+} from "@/types";
 
 export const LOCAL_STORAGE_KEY = "chaos-zero-nightmare-checked-task-ids";
 
@@ -34,11 +39,11 @@ export const getAchievedTaskIds = (
 };
 
 export const getTabCompletion = (
-  tasks: ChallengeTask[],
+  categories: SeasonCategory[],
   achievedTaskIds: Set<string>,
   category: ChallengeCategory,
 ): TabCompletion => {
-  const tabTasks = tasks.filter((task) => task.category === category);
+  const tabTasks = categories.find((value) => value.id === category)?.tasks ?? [];
   const total = tabTasks.length;
 
   if (total === 0) {

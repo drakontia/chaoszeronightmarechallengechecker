@@ -15,13 +15,17 @@ export function ChallengeCheckerPage() {
   const [activeTab, setActiveTab] = useState<ChallengeCategory>("weekly-score");
 
   const season = seasons.find((value) => value.id === seasonId) ?? seasons[0];
-  const { achievedTaskIds, checkedTaskIds, toggleTask } = useChallengeProgress(season.tasks);
+  const seasonTasks = useMemo(
+    () => season.categories.flatMap((category) => category.tasks),
+    [season.categories],
+  );
+  const { achievedTaskIds, checkedTaskIds, toggleTask } = useChallengeProgress(seasonTasks);
 
   const completionByTab = useMemo(
     () =>
       challengeTabs.reduce(
         (acc, tab) => {
-          acc[tab.id] = getTabCompletion(season.tasks, achievedTaskIds, tab.id);
+          acc[tab.id] = getTabCompletion(season.categories, achievedTaskIds, tab.id);
           return acc;
         },
         {
@@ -32,13 +36,12 @@ export function ChallengeCheckerPage() {
           annihilation: { completed: 0, total: 0, rate: 0 },
         },
       ),
-    [achievedTaskIds, season.tasks],
+    [achievedTaskIds, season.categories],
   );
 
-  const currentTasks = useMemo(
-    () => season.tasks.filter((task) => task.category === activeTab),
-    [activeTab, season.tasks],
-  );
+  const currentTasks = useMemo(() => {
+    return season.categories.find((category) => category.id === activeTab)?.tasks ?? [];
+  }, [activeTab, season.categories]);
 
   const cycleSeason = () => {
     const currentIndex = seasons.findIndex((value) => value.id === seasonId);
