@@ -1,0 +1,2 @@
+# ChaosZeroNightmareChallengeChecker
+ゲーム「カオスゼロナイトメア」のシーズンにおける挑戦課題をチェック・保存出来る攻略補助サイトです。
