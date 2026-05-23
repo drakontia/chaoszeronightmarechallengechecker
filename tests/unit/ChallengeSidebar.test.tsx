@@ -86,7 +86,7 @@ describe("ChallengeSidebar", () => {
     );
 
     for (const tab of challengeTabs) {
-      const tabButton = screen.getByRole("tab", { name: new RegExp(tab.labelKey.replace(".", "\\.")) });
+      const tabButton = screen.getByRole("tab", { name: new RegExp(tab.labelKey.replace(/\./g, "\\.")) });
       await user.click(tabButton);
       expect(onTabChange).toHaveBeenLastCalledWith(tab.id);
     }
