@@ -5,7 +5,8 @@
     "xLink": "@MhdenOfRamuh のXアカウント"
   },
   "season": {
-    "s3": "シーズン3「銀河に響く歌声」"
+    "s3": "シーズン3「銀河に響く歌声」",
+    "selectorLabel": "シーズンを選択"
   },
   "tabs": {
     "ariaLabel": "挑戦課題カテゴリ",
