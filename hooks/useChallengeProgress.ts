@@ -31,7 +31,6 @@ export const useChallengeProgress = (tasks: ChallengeTask[]) => {
       };
     } catch {
       window.localStorage.removeItem(LOCAL_STORAGE_KEY);
-      return;
     }
   }, []);
 

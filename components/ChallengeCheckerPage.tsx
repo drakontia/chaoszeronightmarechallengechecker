@@ -39,9 +39,10 @@ export function ChallengeCheckerPage() {
     [achievedTaskIds, season.categories],
   );
 
-  const currentTasks = useMemo(() => {
-    return season.categories.find((category) => category.id === activeTab)?.tasks ?? [];
-  }, [activeTab, season.categories]);
+  const currentTasks = useMemo(
+    () => season.categories.find((category) => category.id === activeTab)?.tasks ?? [],
+    [activeTab, season.categories],
+  );
 
   const cycleSeason = () => {
     const currentIndex = seasons.findIndex((value) => value.id === seasonId);
