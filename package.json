@@ -2,6 +2,7 @@
   "name": "chaos-zero-nightmare-challenge-checker",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.26.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,6 +10,7 @@
     "lint": "eslint",
     "test": "pnpm test:unit && pnpm test:e2e",
     "test:unit": "vitest run",
+    "test:unit:coverage": "vitest run --coverage",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -23,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "jsdom": "^26.1.0",
