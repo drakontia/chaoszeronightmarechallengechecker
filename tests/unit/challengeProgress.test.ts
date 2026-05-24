@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { getAchievedTaskIds, getTabCompletion } from "@/lib/challengeProgress";
+import { getAchievedTaskIds, getTabCompletion, getWeekStartTimestamp } from "@/lib/challengeProgress";
 import { seasons } from "@/lib/challengeData";
 
 describe("challengeProgress", () => {
@@ -88,6 +88,68 @@ describe("challengeProgress", () => {
       expect(before.total).toBe(ANNIHILATION_TOTAL);
       expect(afterOne.rate).toBeGreaterThan(0);
       expect(afterAll.rate).toBe(100);
+    });
+  });
+
+  describe("getWeekStartTimestamp", () => {
+    // Helper: build a Date from date parts + hour in local time
+    const local = (year: number, month: number, day: number, hour = 0, minute = 0) =>
+      new Date(year, month - 1, day, hour, minute, 0, 0);
+
+    test("Monday after 3AM → returns that Monday at 03:00", () => {
+      // 2024-05-13 (Mon) 10:00 local
+      const d = local(2024, 5, 13, 10, 0);
+      const result = new Date(getWeekStartTimestamp(d));
+
+      expect(result.getFullYear()).toBe(2024);
+      expect(result.getMonth()).toBe(4); // May (0-indexed)
+      expect(result.getDate()).toBe(13);
+      expect(result.getHours()).toBe(3);
+      expect(result.getMinutes()).toBe(0);
+    });
+
+    test("Monday before 3AM → returns the previous Monday at 03:00", () => {
+      // 2024-05-13 (Mon) 02:00 local — still in the previous week
+      const d = local(2024, 5, 13, 2, 0);
+      const result = new Date(getWeekStartTimestamp(d));
+
+      // Should be 2024-05-06 (previous Monday) at 03:00
+      expect(result.getFullYear()).toBe(2024);
+      expect(result.getMonth()).toBe(4); // May
+      expect(result.getDate()).toBe(6);
+      expect(result.getHours()).toBe(3);
+    });
+
+    test("Wednesday → returns the Monday of that same week at 03:00", () => {
+      // 2024-05-15 (Wed) 12:00 local
+      const d = local(2024, 5, 15, 12, 0);
+      const result = new Date(getWeekStartTimestamp(d));
+
+      // Should be 2024-05-13 (Mon) at 03:00
+      expect(result.getDate()).toBe(13);
+      expect(result.getMonth()).toBe(4); // May
+      expect(result.getHours()).toBe(3);
+    });
+
+    test("Sunday → returns the previous Monday at 03:00", () => {
+      // 2024-05-19 (Sun) 23:00 local
+      const d = local(2024, 5, 19, 23, 0);
+      const result = new Date(getWeekStartTimestamp(d));
+
+      // Should be 2024-05-13 (Mon) at 03:00
+      expect(result.getDate()).toBe(13);
+      expect(result.getMonth()).toBe(4); // May
+      expect(result.getHours()).toBe(3);
+    });
+
+    test("exactly Monday 03:00 → returns that moment itself", () => {
+      // 2024-05-13 (Mon) 03:00:00.000 local
+      const d = local(2024, 5, 13, 3, 0);
+      const result = new Date(getWeekStartTimestamp(d));
+
+      expect(result.getDate()).toBe(13);
+      expect(result.getHours()).toBe(3);
+      expect(result.getMinutes()).toBe(0);
     });
   });
 });

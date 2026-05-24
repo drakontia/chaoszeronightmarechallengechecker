@@ -13,19 +13,12 @@ vi.mock("next/image", () => ({
 
 afterEach(cleanup);
 
+// Fixtures for derived/manual/reward/child tests
 const childTask1: ChallengeTask = {
   id: "child-1",
   status: "manual",
   titleKey: "tasks.child1.title",
   descriptionKey: "tasks.child1.description",
-  isChild: true,
-};
-
-const childTask2: ChallengeTask = {
-  id: "child-2",
-  status: "manual",
-  titleKey: "tasks.child2.title",
-  descriptionKey: "tasks.child2.description",
   isChild: true,
 };
 
@@ -51,6 +44,56 @@ const manualTask: ChallengeTask = {
   descriptionKey: "tasks.manual1.description",
   progressMax: 5,
 };
+
+// Fixtures for sorting tests
+const sortableTasks: ChallengeTask[] = [
+  { id: "task-a", status: "manual", titleKey: "Title A", descriptionKey: "Desc A" },
+  { id: "task-b", status: "manual", titleKey: "Title B", descriptionKey: "Desc B" },
+  { id: "task-c", status: "manual", titleKey: "Title C", descriptionKey: "Desc C" },
+];
+
+describe("ChallengeTaskList — task sort order", () => {
+  test("uncompleted tasks appear before completed tasks", () => {
+    const achievedTaskIds = new Set(["task-a"]);
+
+    render(
+      <ChallengeTaskList
+        tasks={sortableTasks}
+        achievedTaskIds={achievedTaskIds}
+        checkedTaskIds={["task-a"]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    const checkboxes = screen.getAllByRole("checkbox");
+    const labels = checkboxes.map((cb) => cb.getAttribute("aria-label"));
+
+    const achievedIndex = labels.indexOf("Title A");
+    const uncompleted = labels.filter((l) => l !== "Title A");
+
+    uncompleted.forEach((label) => {
+      const idx = labels.indexOf(label);
+      expect(idx).toBeLessThan(achievedIndex);
+    });
+  });
+
+  test("all tasks are still rendered after sorting", () => {
+    const achievedTaskIds = new Set(["task-b"]);
+
+    render(
+      <ChallengeTaskList
+        tasks={sortableTasks}
+        achievedTaskIds={achievedTaskIds}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.getByRole("checkbox", { name: "Title A" })).toBeDefined();
+    expect(screen.getByRole("checkbox", { name: "Title B" })).toBeDefined();
+    expect(screen.getByRole("checkbox", { name: "Title C" })).toBeDefined();
+  });
+});
 
 describe("ChallengeTaskList — derived task progress display", () => {
   test("shows 0/N when no children are achieved", () => {
