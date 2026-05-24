@@ -388,8 +388,6 @@ export const seasons: Season[] = [
           },
           { id: "ca-blank-anthem", status: "manual", titleKey: "tasks.caBlankAnthem.title", descriptionKey: "tasks.caBlankAnthem.description", isChild: true },
           { id: "ca-broken-divine", status: "manual", titleKey: "tasks.caBrokenDivine.title", descriptionKey: "tasks.caBrokenDivine.description", isChild: true },
-          // 単体（後半）
-          { id: "ca-unknown-audition", status: "manual", titleKey: "tasks.caUnknownAudition.title", descriptionKey: "tasks.caUnknownAudition.description" },
           // エリドナの栄光（derived: 6 children）
           {
             id: "ca-eridona-glory",
