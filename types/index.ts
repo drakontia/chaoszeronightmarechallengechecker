@@ -7,13 +7,18 @@ export type ChallengeCategory =
 
 export type ChallengeStatus = "manual" | "derived";
 
+export interface Reward {
+  image: string;
+  altKey: string;
+  amount?: number;
+}
+
 export interface ChallengeTask {
   id: string;
   status: ChallengeStatus;
   titleKey: string;
   descriptionKey: string;
-  rewardImage?: string;
-  rewardAltKey?: string;
+  rewards?: Reward[];
   progressMax?: number;
   isChild?: boolean;
   childIds?: string[];
