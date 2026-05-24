@@ -3,8 +3,14 @@ import { afterEach, describe, expect, test, vi } from "vitest";
 import { ChallengeTaskList } from "@/components/ChallengeTaskList";
 import { ChallengeTask } from "@/types";
 
+const EMPTY_DESC_KEY = "tasks.ws2000.description";
+const NONEMPTY_DESC_KEY = "tasks.mlMayor.description";
+
 vi.mock("next-intl", () => ({
-  useTranslations: () => (key: string) => key,
+  useTranslations: () => (key: string) => {
+    if (key === EMPTY_DESC_KEY) return "";
+    return key;
+  },
 }));
 
 vi.mock("next/image", () => ({
@@ -12,6 +18,20 @@ vi.mock("next/image", () => ({
 }));
 
 afterEach(cleanup);
+
+const baseTask = (overrides: Partial<ChallengeTask>): ChallengeTask => ({
+  id: "test-task",
+  status: "manual",
+  titleKey: "tasks.ws2000.title",
+  descriptionKey: EMPTY_DESC_KEY,
+  ...overrides,
+});
+
+const defaultProps = {
+  achievedTaskIds: new Set<string>(),
+  checkedTaskIds: [] as string[],
+  onToggleTask: vi.fn(),
+};
 
 // Fixtures for derived/manual/reward/child tests
 const childTask1: ChallengeTask = {
@@ -51,6 +71,25 @@ const sortableTasks: ChallengeTask[] = [
   { id: "task-b", status: "manual", titleKey: "Title B", descriptionKey: "Desc B" },
   { id: "task-c", status: "manual", titleKey: "Title C", descriptionKey: "Desc C" },
 ];
+
+describe("ChallengeTaskList", () => {
+  test("renders description paragraph when translation is non-empty", () => {
+    const task = baseTask({ descriptionKey: NONEMPTY_DESC_KEY });
+
+    render(<ChallengeTaskList tasks={[task]} {...defaultProps} />);
+
+    expect(screen.getByText(NONEMPTY_DESC_KEY)).toBeTruthy();
+  });
+
+  test("does not render description paragraph when translation is empty", () => {
+    const task = baseTask({ descriptionKey: EMPTY_DESC_KEY });
+
+    render(<ChallengeTaskList tasks={[task]} {...defaultProps} />);
+
+    // The description key itself should never appear in the DOM
+    expect(screen.queryByText(EMPTY_DESC_KEY)).toBeNull();
+  });
+});
 
 describe("ChallengeTaskList — task sort order", () => {
   test("uncompleted tasks appear before completed tasks", () => {
@@ -234,3 +273,4 @@ describe("ChallengeTaskList — checkbox interaction", () => {
     expect(onToggleTask).toHaveBeenCalledWith(manualTask);
   });
 });
+
