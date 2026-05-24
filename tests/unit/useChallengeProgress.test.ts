@@ -9,9 +9,7 @@ const manualTask: ChallengeTask = {
   status: "manual",
   titleKey: "tasks.weekly1.title",
   descriptionKey: "tasks.weekly1.description",
-  rewardImage: "/rewards/crystal.svg",
-  rewardAltKey: "rewards.crystal",
-  progressKey: "progress.single",
+  rewards: [{ image: "/rewards/crystal.svg", altKey: "rewards.crystal" }],
 };
 
 const manualTask2: ChallengeTask = {
@@ -19,9 +17,7 @@ const manualTask2: ChallengeTask = {
   status: "manual",
   titleKey: "tasks.weekly2.title",
   descriptionKey: "tasks.weekly2.description",
-  rewardImage: "/rewards/coin.svg",
-  rewardAltKey: "rewards.coin",
-  progressKey: "progress.single",
+  rewards: [{ image: "/rewards/coin.svg", altKey: "rewards.coin" }],
 };
 
 const childTask1: ChallengeTask = {
@@ -29,9 +25,7 @@ const childTask1: ChallengeTask = {
   status: "manual",
   titleKey: "tasks.annihilationChild1.title",
   descriptionKey: "tasks.annihilationChild1.description",
-  rewardImage: "/rewards/ticket.svg",
-  rewardAltKey: "rewards.ticket",
-  progressKey: "progress.single",
+  rewards: [{ image: "/rewards/ticket.svg", altKey: "rewards.ticket" }],
 };
 
 const childTask2: ChallengeTask = {
@@ -39,9 +33,7 @@ const childTask2: ChallengeTask = {
   status: "manual",
   titleKey: "tasks.annihilationChild2.title",
   descriptionKey: "tasks.annihilationChild2.description",
-  rewardImage: "/rewards/chip.svg",
-  rewardAltKey: "rewards.chip",
-  progressKey: "progress.single",
+  rewards: [{ image: "/rewards/chip.svg", altKey: "rewards.chip" }],
 };
 
 const derivedTask: ChallengeTask = {
@@ -49,9 +41,7 @@ const derivedTask: ChallengeTask = {
   status: "derived",
   titleKey: "tasks.annihilationParent.title",
   descriptionKey: "tasks.annihilationParent.description",
-  rewardImage: "/rewards/crystal.svg",
-  rewardAltKey: "rewards.crystal",
-  progressKey: "progress.derived",
+  rewards: [{ image: "/rewards/crystal.svg", altKey: "rewards.crystal" }],
   childIds: ["annihilation-child-1", "annihilation-child-2"],
 };
 

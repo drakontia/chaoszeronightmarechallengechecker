@@ -217,14 +217,13 @@ describe("ChallengeTaskList — manual task progress display", () => {
 });
 
 describe("ChallengeTaskList — reward image", () => {
-  test("renders reward image when rewardImage and rewardAltKey are set", () => {
+  test("renders reward image when rewards array has one item", () => {
     const taskWithReward: ChallengeTask = {
       id: "reward-task",
       status: "manual",
       titleKey: "tasks.reward.title",
       descriptionKey: "tasks.reward.description",
-      rewardImage: "/images/reward.png",
-      rewardAltKey: "tasks.reward.alt",
+      rewards: [{ image: "/images/reward.png", altKey: "tasks.reward.alt" }],
     };
 
     render(
@@ -237,6 +236,74 @@ describe("ChallengeTaskList — reward image", () => {
     );
 
     expect(screen.getByAltText("tasks.reward.alt")).toBeTruthy();
+  });
+
+  test("renders both reward images when rewards array has two items", () => {
+    const taskWithTwoRewards: ChallengeTask = {
+      id: "reward-task-2",
+      status: "manual",
+      titleKey: "tasks.reward.title",
+      descriptionKey: "tasks.reward.description",
+      rewards: [
+        { image: "/images/reward1.png", altKey: "tasks.reward.alt1" },
+        { image: "/images/reward2.png", altKey: "tasks.reward.alt2" },
+      ],
+    };
+
+    render(
+      <ChallengeTaskList
+        tasks={[taskWithTwoRewards]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.getByAltText("tasks.reward.alt1")).toBeTruthy();
+    expect(screen.getByAltText("tasks.reward.alt2")).toBeTruthy();
+  });
+
+  test("shows amount badge with comma-separated number when amount is set", () => {
+    const taskWithAmount: ChallengeTask = {
+      id: "reward-amount-task",
+      status: "manual",
+      titleKey: "tasks.reward.title",
+      descriptionKey: "tasks.reward.description",
+      rewards: [{ image: "/images/reward.png", altKey: "tasks.reward.alt", amount: 1000 }],
+    };
+
+    render(
+      <ChallengeTaskList
+        tasks={[taskWithAmount]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.getByText("1,000")).toBeTruthy();
+  });
+
+  test("does not show amount badge when amount is not set", () => {
+    const taskNoAmount: ChallengeTask = {
+      id: "reward-no-amount-task",
+      status: "manual",
+      titleKey: "tasks.reward.title",
+      descriptionKey: "tasks.reward.description",
+      rewards: [{ image: "/images/reward.png", altKey: "tasks.reward.alt" }],
+    };
+
+    render(
+      <ChallengeTaskList
+        tasks={[taskNoAmount]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    // No numeric text related to amount should appear
+    expect(screen.queryByText(/^\d{1,3}(,\d{3})*$/)).toBeNull();
   });
 });
 

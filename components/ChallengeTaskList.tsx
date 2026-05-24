@@ -49,7 +49,7 @@ export function ChallengeTaskList({
           return (
             <li
               key={task.id}
-              className={`grid grid-cols-[auto_1fr_auto_84px_96px] items-center gap-3 rounded-lg border border-zinc-200 p-3 ${
+              className={`grid grid-cols-[auto_1fr_auto_auto_96px] items-center gap-3 rounded-lg border border-zinc-200 p-3 ${
                 achieved ? "bg-emerald-50" : "bg-white"
               }`}
             >
@@ -110,10 +110,17 @@ export function ChallengeTaskList({
                 )}
               </div>
 
-              <div className="flex justify-center">
-                {task.rewardImage && task.rewardAltKey && (
-                  <Image src={task.rewardImage} alt={t(task.rewardAltKey)} width={56} height={56} />
-                )}
+              <div className="flex justify-center gap-1">
+                {task.rewards?.map((reward) => (
+                  <div key={reward.altKey} className="relative">
+                    <Image src={reward.image} alt={t(reward.altKey)} width={56} height={56} />
+                    {reward.amount !== undefined && (
+                      <span className="absolute bottom-0 right-0 rounded bg-black/60 px-0.5 text-[10px] font-bold leading-tight text-white">
+                        {reward.amount.toLocaleString()}
+                      </span>
+                    )}
+                  </div>
+                ))}
               </div>
 
               <p className="text-sm font-medium text-zinc-700">
