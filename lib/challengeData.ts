@@ -75,7 +75,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlMayor.title",
             descriptionKey: "tasks.mlMayor.description",
-            rewardImage: "/rewards/season3/hidemarie_sword.svg",
+            rewardImage: "/rewards/season3/hidemarie_sword.png",
             rewardAltKey: "rewards.season3.hidemarie_sword",
           },
           {
@@ -83,7 +83,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlStopIt.title",
             descriptionKey: "tasks.mlStopIt.description",
-            rewardImage: "/rewards/season3/auroras_coat_of_arms.svg",
+            rewardImage: "/rewards/season3/auroras_coat_of_arms.png",
             rewardAltKey: "rewards.season3.auroras_coat_of_arms",
           },
           {
@@ -493,8 +493,8 @@ export const seasons: Season[] = [
             titleKey: "tasks.brStageMonopoly.title",
             descriptionKey: "tasks.brStageMonopoly.description",
             childIds: ["br-phantom-extra", "br-tbd-2", "br-tbd-3"],
-            rewardImage: "/rewards/season3/monopoly_of_stage.png",
-            rewardAltKey: "rewards.season3.monopoly_of_stage",
+            rewardImage: "/rewards/season3/monopoly_on_stage.png",
+            rewardAltKey: "rewards.season3.monopoly_on_stage",
 
           },
           { id: "br-phantom-extra", status: "manual", titleKey: "tasks.brPhantomExtra.title", descriptionKey: "tasks.brPhantomExtra.description", isChild: true },
