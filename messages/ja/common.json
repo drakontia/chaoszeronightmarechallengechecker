@@ -19,6 +19,10 @@
   "tasks": {
     "section": "挑戦課題一覧",
     "derivedNotice": "下位課題をすべて達成すると完了します",
+    "childList": {
+      "open": "子課題を表示",
+      "completed": "完了"
+    },
 
     "ws2000": { "title": "【銀河に響く歌声】今週の達成スコア2000達成", "description": "" },
     "ws3000": { "title": "【銀河に響く歌声】今週の達成スコア3000達成", "description": "" },
