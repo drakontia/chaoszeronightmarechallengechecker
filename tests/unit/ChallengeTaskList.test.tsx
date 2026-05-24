@@ -274,3 +274,167 @@ describe("ChallengeTaskList — checkbox interaction", () => {
   });
 });
 
+describe("ChallengeTaskList — derivedNotice removal", () => {
+  test("does not show derivedNotice text for derived tasks", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.queryByText("tasks.derivedNotice")).toBeNull();
+  });
+});
+
+describe("ChallengeTaskList — info icon for derived tasks", () => {
+  test("renders info icon button for derived tasks", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.getByRole("button", { name: "tasks.childList.open" })).toBeTruthy();
+  });
+
+  test("does not render info icon button for non-derived tasks", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[manualTask]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.queryByRole("button", { name: "tasks.childList.open" })).toBeNull();
+  });
+});
+
+const childTask2: ChallengeTask = {
+  id: "child-2",
+  status: "manual",
+  titleKey: "tasks.child2.title",
+  descriptionKey: "tasks.child2.description",
+  isChild: true,
+};
+
+describe("ChallengeTaskList — child task popup", () => {
+  test("popup is not visible before clicking info icon", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+
+  test("popup shows child task names after clicking info icon", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    expect(screen.getByRole("dialog")).toBeTruthy();
+    expect(screen.getAllByText("tasks.child1.title").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("tasks.child2.title").length).toBeGreaterThan(0);
+  });
+
+  test("completed child task shows 完了 label in popup", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set(["child-1"])}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    const dialog = screen.getByRole("dialog");
+    expect(dialog.textContent).toContain("tasks.childList.completed");
+  });
+
+  test("uncompleted child task does not show 完了 label in popup", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    const dialog = screen.getByRole("dialog");
+    expect(dialog.textContent).not.toContain("tasks.childList.completed");
+  });
+
+  test("completed child task shows checkmark in popup", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set(["child-1"])}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    // Completed child should have aria-label indicating completion
+    expect(screen.getByLabelText("tasks.child1.title tasks.childList.completed")).toBeTruthy();
+  });
+
+  test("uncompleted child task does not show checkmark", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    expect(screen.queryByLabelText("tasks.child1.title tasks.childList.completed")).toBeNull();
+  });
+
+  test("popup closes when info icon is clicked again", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    const btn = screen.getByRole("button", { name: "tasks.childList.open" });
+    fireEvent.click(btn);
+    expect(screen.getByRole("dialog")).toBeTruthy();
+
+    fireEvent.click(btn);
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+});
+
