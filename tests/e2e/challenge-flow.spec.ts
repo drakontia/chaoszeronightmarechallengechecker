@@ -26,10 +26,14 @@ test("challenge checkbox can be toggled and persisted", async ({ page }) => {
 
   const weeklyTask = page.getByRole("checkbox", { name: "【銀河に響く歌声】今週の達成スコア2000達成" });
   await weeklyTask.check();
-  await expect(weeklyTask).toBeChecked();
+
+  // After sorting, the checked task moves to the bottom of the list.
+  // Use checked:true filter to locate it regardless of its new position.
+  const checkedTask = page.getByRole("checkbox", { name: "【銀河に響く歌声】今週の達成スコア", checked: true });
+  await expect(checkedTask).toBeChecked();
 
   await page.reload();
-  await expect(weeklyTask).toBeChecked();
+  await expect(checkedTask).toBeChecked();
 });
 
 test("checking a task checkbox increases the tab progress rate", async ({ page }) => {

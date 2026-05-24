@@ -156,8 +156,7 @@
     "anSc10": { "title": "星雲の歪み-【ソウルコレクター】歪みの重複9以上でクリア", "description": "" }
   },
   "progress": {
-    "done": "達成済み",
-    "derived": "自動判定"
+    "done": "達成済み"
   },
   "rewards": {
     "crystal": "クリスタル",
