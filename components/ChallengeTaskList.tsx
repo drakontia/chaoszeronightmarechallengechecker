@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { ChallengeTask } from "@/types";
 
@@ -19,10 +20,19 @@ export function ChallengeTaskList({
 }: ChallengeTaskListProps) {
   const t = useTranslations();
 
+  const sortedTasks = useMemo(
+    () => [...tasks].sort((a, b) => {
+      const aAchieved = achievedTaskIds.has(a.id) ? 1 : 0;
+      const bAchieved = achievedTaskIds.has(b.id) ? 1 : 0;
+      return aAchieved - bAchieved;
+    }),
+    [tasks, achievedTaskIds],
+  );
+
   return (
     <section className="w-full rounded-xl border border-zinc-200 bg-white p-4 shadow-sm" aria-label={t("tasks.section")}>
       <ul className="space-y-3">
-        {tasks.map((task) => {
+        {sortedTasks.map((task) => {
           const achieved = achievedTaskIds.has(task.id);
           const manuallyChecked = checkedTaskIds.includes(task.id);
           const isDerived = task.status === "derived";
