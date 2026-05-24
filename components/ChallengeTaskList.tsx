@@ -56,7 +56,11 @@ export function ChallengeTaskList({
               </div>
 
               <p className="text-sm font-medium text-zinc-700">
-                {isDerived ? t("progress.derived") : manuallyChecked ? t("progress.done") : `0/${task.progressMax ?? 1}`}
+                {isDerived
+                  ? `${task.childIds?.filter((id) => achievedTaskIds.has(id)).length ?? 0}/${task.childIds?.length ?? 0}`
+                  : manuallyChecked
+                    ? t("progress.done")
+                    : `0/${task.progressMax ?? 1}`}
               </p>
             </li>
           );
