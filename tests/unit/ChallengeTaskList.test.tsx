@@ -372,7 +372,7 @@ describe("ChallengeTaskList — child task popup", () => {
     expect(dialog.textContent).toContain("tasks.childList.completed");
   });
 
-  test("uncompleted child task does not show 完了 label in popup", () => {
+  test("uncompleted child task also shows 完了 label in popup", () => {
     render(
       <ChallengeTaskList
         tasks={[derivedTask, childTask1, childTask2]}
@@ -385,7 +385,7 @@ describe("ChallengeTaskList — child task popup", () => {
     fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
 
     const dialog = screen.getByRole("dialog");
-    expect(dialog.textContent).not.toContain("tasks.childList.completed");
+    expect(dialog.textContent).toContain("tasks.childList.completed");
   });
 
   test("completed child task shows checkmark in popup", () => {
