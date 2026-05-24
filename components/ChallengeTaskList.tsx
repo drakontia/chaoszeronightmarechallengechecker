@@ -45,7 +45,7 @@ export function ChallengeTaskList({
 
               <div className={task.isChild ? "pl-5" : ""}>
                 <p className="text-base font-semibold text-zinc-900">{t(task.titleKey)}</p>
-                <p className="text-sm text-zinc-600">{t(task.descriptionKey)}</p>
+                {t(task.descriptionKey) && <p className="text-sm text-zinc-600">{t(task.descriptionKey)}</p>}
                 {isDerived && <p className="text-xs text-indigo-700">{t("tasks.derivedNotice")}</p>}
               </div>
 
