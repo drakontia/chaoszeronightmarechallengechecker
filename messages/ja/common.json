@@ -160,12 +160,32 @@
   },
   "rewards": {
     "crystal": "クリスタル",
-    "coin": "コイン",
-    "ticket": "補給チケット",
-    "chip": "解析チップ",
-    "flawlessmelody": "無欠の旋律",
-    "sticker": "ステッカー",
-    "unit": "ユニット"
+    "unit": "ユニット",
+    "support_data": "サポートデータ(上級)",
+    "battle_memory": "戦闘メモリー(上級)",
+    "universal_support_cetificate": "ユニバーサルサポート認定書",
+    "universal_battle_certificate": "ユニバーサル戦闘認定書",
+    "potential_disk": "潜在ディスク",
+    "memory_particles": "記憶の粒子",
+    "memory_trraces": "記憶の痕跡",
+    "season3": {
+      "flawless_melody": "無欠の旋律",
+      "all_collector": "オールコレクター",
+      "galaxy_orchestra": "銀河のオーケストラ",
+      "hidemarie_sword": "ハイデマリの剣",
+      "auroras_coat_of_arms": "アウロラの紋章",
+      "hidemarie": "【銀河に響く歌声】ハイデマリ",
+      "perfect_method": "完璧なメソッド",
+      "song_of_light_and_dark": "光と闇の歌",
+      "glory_of_eridona": "エリドナの栄光",
+      "nameless_artist": "名もなき芸術家",
+      "credit_collector": "クレジット収集家",
+       "release_of_the_curtain_call": "カーテンコールの解放",
+       "singing_voice_resonates_across_the_galaxy": "銀河に響く歌声",
+       "unknown_audition": "未知のオーディション",
+       "thousand_faces": "千の顔",
+       "monopoly_of_the_stage": "舞台独占"
+    }
   }
 }
 
