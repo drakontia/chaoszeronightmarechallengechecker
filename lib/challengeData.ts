@@ -237,7 +237,7 @@ export const seasons: Season[] = [
             status: "derived",
             titleKey: "tasks.mlAllSeason.title",
             descriptionKey: "tasks.mlAllSeason.description",
-            rewardImage: "/rewards/season3/all_collector.svg",
+            rewardImage: "/rewards/season3/all_collector.png",
             rewardAltKey: "rewards.season3.all_collector",
             progressMax: 2,
             childIds: ["ml-season-a", "ml-season-b"],
