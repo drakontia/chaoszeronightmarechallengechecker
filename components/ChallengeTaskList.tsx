@@ -99,7 +99,7 @@ export function ChallengeTaskList({
                                 <span className={`flex-1 text-sm ${childAchieved ? "text-zinc-400" : "text-zinc-700"}`}>
                                   {child ? t(child.titleKey) : childId}
                                 </span>
-                                <span className="text-xs text-zinc-400">{t("tasks.childList.completed")}</span>
+                                <span className={`text-xs ${childAchieved ? "text-zinc-400" : "text-zinc-700"}`}>{t("tasks.childList.completed")}</span>
                               </li>
                             );
                           })}

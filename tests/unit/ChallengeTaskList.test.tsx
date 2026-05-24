@@ -419,6 +419,82 @@ describe("ChallengeTaskList — child task popup", () => {
     expect(screen.queryByLabelText("tasks.child1.title tasks.childList.completed")).toBeNull();
   });
 
+  test("completed child task name has gray text class", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set(["child-1"])}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    const titleEl = screen.getAllByText("tasks.child1.title").find(
+      (el) => el.closest("[role='dialog']"),
+    );
+    expect(titleEl?.className).toContain("text-zinc-400");
+  });
+
+  test("uncompleted child task name does not have gray text class", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    const titleEl = screen.getAllByText("tasks.child1.title").find(
+      (el) => el.closest("[role='dialog']"),
+    );
+    expect(titleEl?.className).not.toContain("text-zinc-400");
+  });
+
+  test("completed 完了 label has gray text class", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set(["child-1"])}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    const dialog = screen.getByRole("dialog");
+    const completedLabels = dialog.querySelectorAll("span");
+    const completedLabel = Array.from(completedLabels).find(
+      (el) => el.textContent === "tasks.childList.completed" && el.closest("[aria-label*='tasks.child1.title']"),
+    );
+    expect(completedLabel?.className).toContain("text-zinc-400");
+  });
+
+  test("uncompleted 完了 label does not have gray text class", () => {
+    render(
+      <ChallengeTaskList
+        tasks={[derivedTask, childTask1, childTask2]}
+        achievedTaskIds={new Set()}
+        checkedTaskIds={[]}
+        onToggleTask={vi.fn()}
+      />,
+    );
+
+    fireEvent.click(screen.getByRole("button", { name: "tasks.childList.open" }));
+
+    const dialog = screen.getByRole("dialog");
+    const completedLabels = dialog.querySelectorAll("span");
+    const completedLabel = Array.from(completedLabels).find(
+      (el) => el.textContent === "tasks.childList.completed" && el.closest("[aria-label='tasks.child1.title']"),
+    );
+    expect(completedLabel?.className).not.toContain("text-zinc-400");
+  });
+
   test("popup closes when info icon is clicked again", () => {
     render(
       <ChallengeTaskList
