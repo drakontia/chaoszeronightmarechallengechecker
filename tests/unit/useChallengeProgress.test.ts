@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import { renderHook, act } from "@testing-library/react";
 import { useChallengeProgress } from "@/hooks/useChallengeProgress";
-import { LOCAL_STORAGE_KEY } from "@/lib";
+import { LOCAL_STORAGE_KEY, WEEKLY_RESET_KEY } from "@/lib";
 import { ChallengeTask } from "@/types";
 
 const manualTask: ChallengeTask = {
@@ -208,6 +208,117 @@ describe("useChallengeProgress", () => {
       const stored = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) ?? "[]");
       expect(stored).not.toContain("weekly-1");
       expect(stored).toContain("weekly-2");
+    });
+  });
+
+  describe("weekly reset", () => {
+    const weeklyTaskId = "ws-2000";
+    const nonWeeklyTaskId = "weekly-1"; // manualTask id
+
+    const wsTask: ChallengeTask = {
+      id: weeklyTaskId,
+      status: "manual",
+      titleKey: "tasks.ws2000.title",
+      descriptionKey: "tasks.ws2000.description",
+    };
+
+    const allTasksWithWs = [...allTasks, wsTask];
+    const weeklyScoreTaskIds = [weeklyTaskId];
+
+    // Monday 2024-05-13 10:00 local — well into the current week
+    const mondayAfter3am = new Date(2024, 4, 13, 10, 0, 0, 0).getTime();
+    // The previous Monday 2024-05-06 10:00 local
+    const prevMondayAfter3am = new Date(2024, 4, 6, 10, 0, 0, 0).getTime();
+    // Week start for 2024-05-13: Mon 03:00
+    const currentWeekStart = new Date(2024, 4, 13, 3, 0, 0, 0).getTime();
+
+    beforeEach(() => {
+      // Fix "now" to 2024-05-13 10:00 local (Monday, after 3AM)
+      vi.useFakeTimers();
+      vi.setSystemTime(mondayAfter3am);
+    });
+
+    afterEach(() => {
+      vi.useRealTimers();
+    });
+
+    test("clears weekly-score task IDs when stored week start is from a previous week", () => {
+      // Stored data has both ws and non-ws IDs, but the week start is from last week
+      localStorage.setItem(
+        LOCAL_STORAGE_KEY,
+        JSON.stringify([nonWeeklyTaskId, weeklyTaskId]),
+      );
+      localStorage.setItem(WEEKLY_RESET_KEY, String(prevMondayAfter3am));
+
+      const { result } = renderHook(() =>
+        useChallengeProgress(allTasksWithWs, weeklyScoreTaskIds),
+      );
+
+      expect(result.current.checkedTaskIds).not.toContain(weeklyTaskId);
+    });
+
+    test("preserves non-weekly task IDs when stored week start is from a previous week", () => {
+      localStorage.setItem(
+        LOCAL_STORAGE_KEY,
+        JSON.stringify([nonWeeklyTaskId, weeklyTaskId]),
+      );
+      localStorage.setItem(WEEKLY_RESET_KEY, String(prevMondayAfter3am));
+
+      const { result } = renderHook(() =>
+        useChallengeProgress(allTasksWithWs, weeklyScoreTaskIds),
+      );
+
+      expect(result.current.checkedTaskIds).toContain(nonWeeklyTaskId);
+    });
+
+    test("preserves all task IDs when stored week start is in the current week", () => {
+      localStorage.setItem(
+        LOCAL_STORAGE_KEY,
+        JSON.stringify([nonWeeklyTaskId, weeklyTaskId]),
+      );
+      localStorage.setItem(WEEKLY_RESET_KEY, String(currentWeekStart));
+
+      const { result } = renderHook(() =>
+        useChallengeProgress(allTasksWithWs, weeklyScoreTaskIds),
+      );
+
+      expect(result.current.checkedTaskIds).toContain(weeklyTaskId);
+      expect(result.current.checkedTaskIds).toContain(nonWeeklyTaskId);
+    });
+
+    test("updates WEEKLY_RESET_KEY to the current week start after reset", () => {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([weeklyTaskId]));
+      localStorage.setItem(WEEKLY_RESET_KEY, String(prevMondayAfter3am));
+
+      renderHook(() => useChallengeProgress(allTasksWithWs, weeklyScoreTaskIds));
+
+      const stored = localStorage.getItem(WEEKLY_RESET_KEY);
+      expect(Number(stored)).toBe(currentWeekStart);
+    });
+
+    test("sets WEEKLY_RESET_KEY when not previously stored", () => {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([weeklyTaskId]));
+      // No WEEKLY_RESET_KEY stored → treated as first visit
+
+      renderHook(() => useChallengeProgress(allTasksWithWs, weeklyScoreTaskIds));
+
+      const stored = localStorage.getItem(WEEKLY_RESET_KEY);
+      expect(Number(stored)).toBe(currentWeekStart);
+    });
+
+    test("works with default (empty) weeklyScoreTaskIds — no tasks cleared", () => {
+      localStorage.setItem(
+        LOCAL_STORAGE_KEY,
+        JSON.stringify([nonWeeklyTaskId]),
+      );
+      localStorage.setItem(WEEKLY_RESET_KEY, String(prevMondayAfter3am));
+
+      // Pass empty weekly task IDs → nothing should be cleared
+      const { result } = renderHook(() =>
+        useChallengeProgress(allTasks, []),
+      );
+
+      expect(result.current.checkedTaskIds).toContain(nonWeeklyTaskId);
     });
   });
 });
