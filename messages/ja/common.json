@@ -2,7 +2,7 @@
   "site": {
     "title": "カオスゼロナイトメア挑戦課題チェッカー",
     "description": "シーズンごとの挑戦課題の達成状況をチェックしてローカルに保存できる攻略補助サイトです。",
-    "xLink": "@MhdenOfRamuh のXアカウント"
+    "xLink": "作者のXアカウント"
   },
   "season": {
     "s3": "シーズン3「銀河に響く歌声」",
@@ -27,17 +27,17 @@
     "ws8000": { "title": "【銀河に響く歌声】今週の達成スコア8000達成", "description": "" },
 
     "mlMayor":         { "title": "エディニティ号の市長",   "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア" },
-    "mlStopIt":        { "title": "やめてもらえますか？",   "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア" },
-    "mlPhantom":       { "title": "消せない虚像",           "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア" },
-    "mlGoodbye":       { "title": "さよなら、私の英雄",     "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア" },
+    "mlStopIt":        { "title": "やめてもらえますか？",   "description": "ストーリー-第1章【#06 本当に大切な人】クリア" },
+    "mlPhantom":       { "title": "消せない虚像",           "description": "ストーリー-第1章【#08 払えなかった罪の代償】クリア" },
+    "mlGoodbye":       { "title": "さよなら、私の英雄",     "description": "ストーリー-第1章【#13 さよなら、私の英雄】クリア" },
     "mlMelody1":       { "title": "旋律Ⅰ",                 "description": "無欠の旋律10,000個獲得" },
-    "mlMelody2":       { "title": "旋律Ⅱ",                 "description": "無欠の旋律10,000個獲得" },
-    "mlMelody3":       { "title": "旋律Ⅲ",                 "description": "無欠の旋律10,000個獲得" },
+    "mlMelody2":       { "title": "旋律Ⅱ",                 "description": "無欠の旋律30,000個獲得" },
+    "mlMelody3":       { "title": "旋律Ⅲ",                 "description": "無欠の旋律50,000個獲得" },
     "mlMelody4":       { "title": "旋律Ⅳ",                 "description": "無欠の旋律100,000個獲得" },
     "mlMelody5":       { "title": "旋律Ⅴ",                 "description": "無欠の旋律150,000個獲得" },
     "mlRecord1":       { "title": "銀河に響く歌声の記録Ⅰ", "description": "【銀河に響く歌声】シーズンセーブデータ46,000TB以上獲得" },
-    "mlRecord2":       { "title": "銀河に響く歌声の記録Ⅱ", "description": "【銀河に響く歌声】シーズンセーブデータ46,000TB以上獲得" },
-    "mlRecord3":       { "title": "銀河に響く歌声の記録Ⅲ", "description": "【銀河に響く歌声】シーズンセーブデータ46,000TB以上獲得" },
+    "mlRecord2":       { "title": "銀河に響く歌声の記録Ⅱ", "description": "【銀河に響く歌声】シーズンセーブデータ52,000TB以上獲得" },
+    "mlRecord3":       { "title": "銀河に響く歌声の記録Ⅲ", "description": "【銀河に響く歌声】シーズンセーブデータ58,000TB以上獲得" },
     "mlPersona":       { "title": "ペルソナ",               "description": "ペルソナカード12個獲得" },
     "mlLightSong":     { "title": "光の楽章",               "description": "ペルソナカードに光の刻印8回付与" },
     "mlDarkSong":      { "title": "闇の楽章",               "description": "ペルソナカードに闇の刻印8回付与" },
@@ -156,7 +156,7 @@
     "anSc10": { "title": "星雲の歪み-【ソウルコレクター】歪みの重複9以上でクリア", "description": "" }
   },
   "progress": {
-    "done": "達成済み"
+    "done": "完了"
   },
   "rewards": {
     "crystal": "クリスタル",
