@@ -1,4 +1,5 @@
 import { ChallengeTab, Season } from "@/types";
+import { rewardOf } from "./rewardHelper";
 
 export const challengeTabs: ChallengeTab[] = [
   { id: "weekly-score", labelKey: "tabs.weeklyScore" },
@@ -22,7 +23,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.ws2000.title",
             descriptionKey: "tasks.ws2000.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 2000,
           },
           {
@@ -30,7 +31,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.ws3000.title",
             descriptionKey: "tasks.ws3000.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 3000,
           },
           {
@@ -38,7 +39,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.ws4000.title",
             descriptionKey: "tasks.ws4000.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 4000,
           },
           {
@@ -46,7 +47,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.ws6000.title",
             descriptionKey: "tasks.ws6000.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 6000,
           },
           {
@@ -54,7 +55,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.ws8000.title",
             descriptionKey: "tasks.ws8000.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 8000,
           },
         ],
@@ -70,28 +71,28 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlMayor.title",
             descriptionKey: "tasks.mlMayor.description",
-            rewards: [{ image: "/rewards/season3/hidemarie_sword.png", altKey: "rewards.season3.hidemarie_sword" }],
+            rewards: [rewardOf("hidemarie_sword")],
           },
           {
             id: "ml-stopit",
             status: "manual",
             titleKey: "tasks.mlStopIt.title",
             descriptionKey: "tasks.mlStopIt.description",
-            rewards: [{ image: "/rewards/season3/auroras_coat_of_arms.png", altKey: "rewards.season3.auroras_coat_of_arms" }],
+            rewards: [rewardOf("auroras_coat_of_arms")],
           },
           {
             id: "ml-phantom",
             status: "manual",
             titleKey: "tasks.mlPhantom.title",
             descriptionKey: "tasks.mlPhantom.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody", amount: 100 }],
+            rewards: [rewardOf("flawless_melody", 100)],
           },
           {
             id: "ml-goodbye",
             status: "manual",
             titleKey: "tasks.mlGoodbye.title",
             descriptionKey: "tasks.mlGoodbye.description",
-            rewards: [{ image: "/rewards/season3/hidemarie.png", altKey: "rewards.season3.hidemarie" }],
+            rewards: [rewardOf("hidemarie")],
           },
           // 旋律コレクション
           {
@@ -99,35 +100,35 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlMelody1.title",
             descriptionKey: "tasks.mlMelody1.description",
-            rewards: [{ image: "/rewards/support_data.png", altKey: "rewards.support_data" }],
+            rewards: [rewardOf("support_data")],
           },
           {
             id: "ml-melody-2",
             status: "manual",
             titleKey: "tasks.mlMelody2.title",
             descriptionKey: "tasks.mlMelody2.description",
-            rewards: [{ image: "/rewards/support_data.png", altKey: "rewards.support_data" }],
+            rewards: [rewardOf("support_data")],
           },
           {
             id: "ml-melody-3",
             status: "manual",
             titleKey: "tasks.mlMelody3.title",
             descriptionKey: "tasks.mlMelody3.description",
-            rewards: [{ image: "/rewards/support_data.png", altKey: "rewards.support_data" }],
+            rewards: [rewardOf("support_data")],
           },
           {
             id: "ml-melody-4",
             status: "manual",
             titleKey: "tasks.mlMelody4.title",
             descriptionKey: "tasks.mlMelody4.description",
-            rewards: [{ image: "/rewards/support_data.png", altKey: "rewards.support_data" }],
+            rewards: [rewardOf("support_data")],
           },
           {
             id: "ml-melody-5",
             status: "manual",
             titleKey: "tasks.mlMelody5.title",
             descriptionKey: "tasks.mlMelody5.description",
-            rewards: [{ image: "/rewards/support_data.png", altKey: "rewards.support_data" }],
+            rewards: [rewardOf("support_data")],
           },
           // シーズン記録
           {
@@ -135,7 +136,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlRecord1.title",
             descriptionKey: "tasks.mlRecord1.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 46000,
           },
           {
@@ -143,7 +144,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlRecord2.title",
             descriptionKey: "tasks.mlRecord2.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 52000,
           },
           {
@@ -151,7 +152,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlRecord3.title",
             descriptionKey: "tasks.mlRecord3.description",
-            rewards: [{ image: "/rewards/season3/flawless_melody.png", altKey: "rewards.season3.flawless_melody" }],
+            rewards: [rewardOf("flawless_melody")],
             progressMax: 58000,
           },
           // ペルソナ
@@ -220,7 +221,7 @@ export const seasons: Season[] = [
             status: "derived",
             titleKey: "tasks.mlAllSeason.title",
             descriptionKey: "tasks.mlAllSeason.description",
-            rewards: [{ image: "/rewards/season3/all_collector.png", altKey: "rewards.season3.all_collector" }],
+            rewards: [rewardOf("all_collector")],
             progressMax: 2,
             childIds: ["ml-season-a", "ml-season-b"],
           },
@@ -244,7 +245,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlOrchestra.title",
             descriptionKey: "tasks.mlOrchestra.description",
-            rewards: [{ image: "/rewards/season3/singing_voice_resonates_across the_galaxy.png", altKey: "rewards.season3.singing_voice_resonates_across the_galaxy" }],
+            rewards: [rewardOf("singing_voice_resonates_across the_galaxy")],
           },
         ],
       },
@@ -255,7 +256,7 @@ export const seasons: Season[] = [
         tasks: [
           // カオス征服Ⅰ–Ⅷ
           { id: "ca-conquest-1", status: "manual", titleKey: "tasks.caConquest1.title", descriptionKey: "tasks.caConquest1.description",
-            rewards: [{ image: "/rewards/season3/singing_voice_resonates_across the_galaxy.png", altKey: "rewards.season3.singing_voice_resonates_across the_galaxy" }],
+            rewards: [rewardOf("singing_voice_resonates_across the_galaxy")],
            },
           { id: "ca-conquest-2", status: "manual", titleKey: "tasks.caConquest2.title", descriptionKey: "tasks.caConquest2.description" },
           { id: "ca-conquest-3", status: "manual", titleKey: "tasks.caConquest3.title", descriptionKey: "tasks.caConquest3.description" },
@@ -389,7 +390,7 @@ export const seasons: Season[] = [
               "ca-scratched-void",
               "ca-paradise-silence",
             ],
-            rewards: [{ image: "/rewards/season3/glory_of_elinad.png", altKey: "rewards.season3.glory_of_elinad" }],
+            rewards: [rewardOf("glory_of_elinad")],
           },
           { id: "ca-tbd-3", status: "manual", titleKey: "tasks.caTbd.title", descriptionKey: "tasks.caTbd.description", isChild: true },
           // 名もなき芸術家（derived: 14 children including shared）
@@ -415,14 +416,14 @@ export const seasons: Season[] = [
               "ca-blank-anthem",
               "ca-broken-divine",
             ],
-            rewards: [{ image: "/rewards/season3/nameless_artist.png", altKey: "rewards.season3.nameless_artist" }],
+            rewards: [rewardOf("nameless_artist")],
           },
           { id: "ca-tbd-2", status: "manual", titleKey: "tasks.caTbd.title", descriptionKey: "tasks.caTbd.description", isChild: true },
           { id: "ca-unknown-audition", status: "manual", titleKey: "tasks.caUnknownAudition.title", descriptionKey: "tasks.caUnknownAudition.description",
-            rewards: [{ image: "/rewards/season3/unknown_audition.png", altKey: "rewards.season3.unknown_audition" }],
+            rewards: [rewardOf("unknown_audition")],
            },
           { id: "ca-credit-collector", status: "manual", titleKey: "tasks.caCreditCollector.title", descriptionKey: "tasks.caCreditCollector.description",
-            rewards: [{ image: "/rewards/season3/credit_collector.png", altKey: "rewards.season3.credit_collector" }],
+            rewards: [rewardOf("credit_collector")],
            },
           // カーテンコールの解放（derived: 2 children）
           {
@@ -431,7 +432,7 @@ export const seasons: Season[] = [
             titleKey: "tasks.caCurtainCall.title",
             descriptionKey: "tasks.caCurtainCall.description",
             childIds: ["ca-terrible-encore", "ca-tbd-1"],
-            rewards: [{ image: "/rewards/season3/release_of_the_curtain_call.png", altKey: "rewards.season3.release_of_the_curtain_call" }],
+            rewards: [rewardOf("release_of_the_curtain_call")],
           },
           { id: "ca-terrible-encore", status: "manual", titleKey: "tasks.caTerribleEncore.title", descriptionKey: "tasks.caTerribleEncore.description", isChild: true },
           { id: "ca-tbd-1", status: "manual", titleKey: "tasks.caTbd.title", descriptionKey: "tasks.caTbd.description", isChild: true },
@@ -451,7 +452,7 @@ export const seasons: Season[] = [
             titleKey: "tasks.brThousandFaces.title",
             descriptionKey: "tasks.brThousandFaces.description",
             childIds: ["br-cruelbone", "br-serapion", "br-soul-collector", "br-tbd-4", "br-tbd-5"],
-            rewards: [{ image: "/rewards/season3/thousand_faces.png", altKey: "rewards.season3.thousand_faces" }],
+            rewards: [rewardOf("thousand_faces")],
           },
           { id: "br-cruelbone", status: "manual", titleKey: "tasks.brCruelbone.title", descriptionKey: "tasks.brCruelbone.description", isChild: true },
           { id: "br-serapion", status: "manual", titleKey: "tasks.brSerapion.title", descriptionKey: "tasks.brSerapion.description", isChild: true },
@@ -465,7 +466,7 @@ export const seasons: Season[] = [
             titleKey: "tasks.brStageMonopoly.title",
             descriptionKey: "tasks.brStageMonopoly.description",
             childIds: ["br-phantom-extra", "br-tbd-2", "br-tbd-3"],
-            rewards: [{ image: "/rewards/season3/monopoly_on_stage.png", altKey: "rewards.season3.monopoly_on_stage" }],
+            rewards: [rewardOf("monopoly_on_stage")],
 
           },
           { id: "br-phantom-extra", status: "manual", titleKey: "tasks.brPhantomExtra.title", descriptionKey: "tasks.brPhantomExtra.description", isChild: true },

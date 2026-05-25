@@ -7,6 +7,22 @@ export type ChallengeCategory =
 
 export type ChallengeStatus = "manual" | "derived";
 
+export type RewardKey =
+  | "flawless_melody"
+  | "hidemarie_sword"
+  | "auroras_coat_of_arms"
+  | "hidemarie"
+  | "support_data"
+  | "all_collector"
+  | "singing_voice_resonates_across the_galaxy"
+  | "glory_of_elinad"
+  | "nameless_artist"
+  | "unknown_audition"
+  | "credit_collector"
+  | "release_of_the_curtain_call"
+  | "thousand_faces"
+  | "monopoly_on_stage";
+
 export interface Reward {
   image: string;
   altKey: string;
