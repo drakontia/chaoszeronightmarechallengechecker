@@ -94,8 +94,8 @@ const REWARD_MAP: Record<RewardKey, { image: string; altKey: string }> = {
     altKey: "rewards.season3.tit_in_a_fairy_tale",
   },
   claras_wand: {
-    image: "/rewards/season3/clara_s_wand.png",
-    altKey: "rewards.season3.clara_s_wand",
+    image: "/rewards/season3/claras_wand.png",
+    altKey: "rewards.season3.claras_wand",
   },
   adelheid: {
     image: "/rewards/season3/adelheid.png",
