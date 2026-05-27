@@ -32,10 +32,10 @@ describe("rewardOf", () => {
   });
 
   test("returns correct image for a reward with special characters in name", () => {
-    const reward = rewardOf("singing_voice_resonates_across the_galaxy");
+    const reward = rewardOf("singing_voice_resonates_across_the_galaxy");
 
-    expect(reward.image).toBe("/rewards/season3/singing_voice_resonates_across the_galaxy.png");
-    expect(reward.altKey).toBe("rewards.season3.singing_voice_resonates_across the_galaxy");
+    expect(reward.image).toBe("/rewards/season3/singing_voice_resonates_across_the_galaxy.png");
+    expect(reward.altKey).toBe("rewards.season3.singing_voice_resonates_across_the_galaxy");
   });
 
   test("each reward key maps to a unique image path", () => {
