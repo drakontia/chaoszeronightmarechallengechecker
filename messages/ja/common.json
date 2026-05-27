@@ -23,141 +23,538 @@
       "open": "子課題を表示",
       "completed": "完了"
     },
-
-    "ws2000": { "title": "【銀河に響く歌声】今週の達成スコア2000達成", "description": "" },
-    "ws3000": { "title": "【銀河に響く歌声】今週の達成スコア3000達成", "description": "" },
-    "ws4000": { "title": "【銀河に響く歌声】今週の達成スコア4000達成", "description": "" },
-    "ws6000": { "title": "【銀河に響く歌声】今週の達成スコア6000達成", "description": "" },
-    "ws8000": { "title": "【銀河に響く歌声】今週の達成スコア8000達成", "description": "" },
-
-    "mlMayor":         { "title": "エディニティ号の市長",   "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア" },
-    "mlStopIt":        { "title": "やめてもらえますか？",   "description": "ストーリー-第1章【#06 本当に大切な人】クリア" },
-    "mlPhantom":       { "title": "消せない虚像",           "description": "ストーリー-第1章【#08 払えなかった罪の代償】クリア" },
-    "mlGoodbye":       { "title": "さよなら、私の英雄",     "description": "ストーリー-第1章【#13 さよなら、私の英雄】クリア" },
-    "mlMelody1":       { "title": "旋律Ⅰ",                 "description": "無欠の旋律10,000個獲得" },
-    "mlMelody2":       { "title": "旋律Ⅱ",                 "description": "無欠の旋律30,000個獲得" },
-    "mlMelody3":       { "title": "旋律Ⅲ",                 "description": "無欠の旋律50,000個獲得" },
-    "mlMelody4":       { "title": "旋律Ⅳ",                 "description": "無欠の旋律100,000個獲得" },
-    "mlMelody5":       { "title": "旋律Ⅴ",                 "description": "無欠の旋律150,000個獲得" },
-    "mlRecord1":       { "title": "銀河に響く歌声の記録Ⅰ", "description": "【銀河に響く歌声】シーズンセーブデータ46,000TB以上獲得" },
-    "mlRecord2":       { "title": "銀河に響く歌声の記録Ⅱ", "description": "【銀河に響く歌声】シーズンセーブデータ52,000TB以上獲得" },
-    "mlRecord3":       { "title": "銀河に響く歌声の記録Ⅲ", "description": "【銀河に響く歌声】シーズンセーブデータ58,000TB以上獲得" },
-    "mlPersona":       { "title": "ペルソナ",               "description": "ペルソナカード12個獲得" },
-    "mlLightSong":     { "title": "光の楽章",               "description": "ペルソナカードに光の刻印8回付与" },
-    "mlDarkSong":      { "title": "闇の楽章",               "description": "ペルソナカードに闇の刻印8回付与" },
-    "mlPerfectMethod": { "title": "完璧なメソッド",         "description": "すべてのペルソナカード獲得" },
-    "mlLightDarkSong": { "title": "光と闇の歌",             "description": "挑戦課題【光の歌と闇の歌】を達成" },
-    "mlLightOfSong":   { "title": "光の歌",                 "description": "任意の戦闘員の光の刻印が5以上付与された状態でカオスクリア" },
-    "mlDarkOfSong":    { "title": "闇の歌",                 "description": "任意の戦闘員の闇の刻印が5以上付与された状態でカオスクリア" },
-    "mlLightEquip":    { "title": "光が刻まれた武具",       "description": "装備に光の刻印8回付与" },
-    "mlDarkEquip":     { "title": "闇が刻まれた武具",       "description": "装備に闇の刻印8回付与" },
-    "mlAllSeason":     { "title": "【銀河に響く歌声】オールコレクター", "description": "すべての【銀河に響く歌声】シーズンコレクター挑戦課題達成" },
-    "mlSeasonA":       { "title": "【銀河に響く歌声】シーズンカードコレクター", "description": "【銀河に響く歌声】のすべてのシーズンカード獲得" },
-    "mlSeasonB":       { "title": "【銀河に響く歌声】シーズン装備コレクター", "description": "【銀河に響く歌声】のすべてのシーズン装備獲得" },
-    "mlOrchestra":     { "title": "銀河系のオーケストラ",   "description": "【銀河に響く歌声】シーズン内すべての銀河勲章挑戦課題達成" },
-
-    "caConquest1": { "title": "カオス征服Ⅰ", "description": "カオス-【虚像の劇場】1段階クリア" },
-    "caConquest2": { "title": "カオス征服Ⅱ", "description": "カオス-【虚像の劇場】2段階クリア" },
-    "caConquest3": { "title": "カオス征服Ⅲ", "description": "カオス-【虚像の劇場】3段階クリア" },
-    "caConquest4": { "title": "カオス征服Ⅳ", "description": "カオス-【虚像の劇場】4段階クリア" },
-    "caConquest5": { "title": "カオス征服Ⅴ", "description": "カオス-【虚像の劇場】5段階クリア" },
-    "caConquest6": { "title": "カオス征服Ⅵ", "description": "カオス-【虚像の劇場】6段階クリア" },
-    "caConquest7": { "title": "カオス征服Ⅶ", "description": "カオス-【虚像の劇場】7段階クリア" },
-    "caConquest8": { "title": "カオス征服Ⅷ", "description": "カオス-【虚像の劇場】8段階クリア" },
-    "caLastHeart":                   { "title": "最後の本心",           "description": "希少装備誰かの手紙獲得" },
-    "caLuckyGoddess":                { "title": "幸運の女神",           "description": "未確認エリア【バラバラになった偶像】オークションで100クレジットで落札成功" },
-    "caMadBid":                      { "title": "狂気じみた落札",       "description": "未確認エリア【バラバラになった偶像】オークションで400クレジットで落札成功" },
-    "caBurningAnthem":               { "title": "燃える聖歌",           "description": "未確認エリア【人為的な光輝】で聖歌を最後まで鑑賞する" },
-    "caGiveUp":                      { "title": "あきらめたら楽になるよ", "description": "レイと一緒に未確認エリア【演出家の台本】で「終末の脚本」を確認する" },
-    "caAnnotation":                  { "title": "消せない注釈",         "description": "ハイデマリと一緒に未確認エリア【非情な批評家】、【栄光の記念碑】で「毀損された碑文」を確認する" },
-    "caArtCritic":                   { "title": "作品批評家",           "description": "未確認エリア【非情な批評家】、【耽美主義者】ですべての種類の評価を行う" },
-    "caDiscerningAudience":          { "title": "見る目のある観客",     "description": "未確認エリア【非情な批評家】で「芸術性を論ずる」選択肢確認" },
-    "caBoringAudience":              { "title": "退屈な観客",           "description": "未確認エリア【非情な批評家】で「陳腐さを指摘する」選択肢確認" },
-    "caNoiseAudience":               { "title": "騒音を楽しむ観客",     "description": "未確認エリア【非情な批評家】で「不協和音の調和について論ずる」選択肢確認" },
-    "caErosionAudience":             { "title": "侵食の観客",           "description": "未確認エリア【非情な批評家】で「侵食の美学に同調する」選択肢確認" },
-    "caMirrorAudience":              { "title": "鏡の中の観客",         "description": "未確認エリア【耽美主義者】で「屈折の美学について論ずる」選択肢を確認" },
-    "caEmotionalAudience":           { "title": "感情的な観客",         "description": "未確認エリア【耽美主義者】で「絶望の価値を肯定する」選択肢を確認" },
-    "caSymbolicAudience":            { "title": "象徴的な観客",         "description": "未確認エリア【耽美主義者】で「垂直的な構造を讃える」選択肢を確認" },
-    "caEridonaGlory":                { "title": "エリドナの栄光",       "description": "カオス-【虚像の劇場】ですべての情報型選択肢、相互作用選択肢確認" },
-    "caHiddenWork":                  { "title": "隠された遺作",         "description": "未確認エリア【可能性のギャラリー】で作品を覗き込む" },
-    "caLastExhibition":              { "title": "批評家の最後の展示",   "description": "折れた黄金の羽根ペン獲得後、【可能性のギャラリー】で「作品について聞く」選択肢確認" },
-    "caAllRelics":                   { "title": "いわくのない遺品はない", "description": "未確認エリア【遺品露天商】で遺品の事情を確認する" },
-    "caStopAdmiring":                { "title": "憧れるのはやめましょう", "description": "未確認エリア【歪んだ恋心】で誰かの観察日誌確認" },
-    "caEternalNoon":                 { "title": "抉り取られた永遠の正午", "description": "未確認エリア【非情な批評家】、【栄光の記念碑】で「毀損された碑文」を確認する" },
-    "caArtIsHard":                   { "title": "芸術は難しく、人生は短い", "description": "未確認エリア【演出家の台本】で「終末の脚本」を確認する" },
-    "caAllTragedy":                  { "title": "すべての悲劇は本心だった", "description": "未確認エリア【引き裂かれた本心】ですべてのインタラクション確認" },
-    "caFirstErased":                 { "title": "真っ先に消される記録", "description": "未確認エリア【引き裂かれた本心】で「剥製になった心臓の告解」を確認する" },
-    "caWayToUnite":                  { "title": "一つになれる方法",     "description": "未確認エリア【引き裂かれた本心】で「唯一の光、メシアへ」を確認する" },
-    "caMostValuable":                { "title": "最も価値のある作品",   "description": "未確認エリア【引き裂かれた本心】で「私の頑固な芸術家へ」を確認する" },
-    "caIncompleteMasterpiece":       { "title": "不完全な傑作の完成",   "description": "未確認エリア【バラバラになった偶像】で全ての作品の説明を聞く" },
-    "caStuffedBreath":               { "title": "剥製にされた息の軌跡", "description": "未確認エリア【バラバラになった偶像】で「メシアのトルソー」作品についての説明を求める" },
-    "caScratchedVoid":               { "title": "引っかかれた虚空の記録", "description": "未確認エリア【バラバラになった偶像】で「メシアの左手の彫像」作品についての説明を求める" },
-    "caParadiseSilence":             { "title": "楽園を宿した沈黙",     "description": "未確認エリア【バラバラになった偶像】で「メシアの下顎の彫像」作品についての説明を求める" },
-    "caNamelessArtist":              { "title": "名もなき芸術家",       "description": "カオス-【虚像の劇場】のすべての作品収集" },
-    "caCriticLegacy":                { "title": "批評家の遺産",         "description": "希少装備折れた黄金の羽根ペン獲得" },
-    "caBetrayalMoment":              { "title": "裏切りの瞬間",         "description": "希少装備片方だけの結婚指輪獲得" },
-    "caIncomprehensibleObsession":   { "title": "理解できない執着",     "description": "伝説装備理解できない神物獲得" },
-    "caMessiahBeliever":             { "title": "メシアの信者",         "description": "未確認エリア【バラバラになった偶像】でオークションに参加してすべての作品獲得" },
-    "caMostDesperate":               { "title": "最も壮絶な絶望",       "description": "未確認エリア【バラバラになった偶像】でオークションに参加して華奢な鎖骨獲得" },
-    "caEternalAnthem":               { "title": "永遠の聖歌",           "description": "未確認エリア【バラバラになった偶像】でオークションに参加して渇望する左手獲得" },
-    "caStuffedChest":                { "title": "剥製にされた胸部",     "description": "未確認エリア【バラバラになった偶像】でオークションに参加して聖歌を歌う唇獲得" },
-    "caNoiseCondutor":               { "title": "騒音の指揮者",         "description": "未確認エリア【音響制御室】で高音、低音、静寂のすべての選択肢確認" },
-    "caAriaHigh":                    { "title": "天井を切り裂くアリア", "description": "未確認エリア【音響制御室】で高音周波数を選択する" },
-    "caAbyssVibration":              { "title": "深淵よりの振動",       "description": "未確認エリア【音響制御室】で低音周波数を選択する" },
-    "caBlankScore":                  { "title": "空白で書いた楽譜",     "description": "未確認エリア【音響制御室】で静寂周波数を選択する" },
-    "caPhantomCollector":            { "title": "虚像の収集家",         "description": "未確認エリア【可能性のギャラリー】ですべての絵収集" },
-    "caPureCorruption":              { "title": "純粋の堕落",           "description": "未確認エリア【可能性のギャラリー】で伝説カード腐りゆくリンゴと少女獲得" },
-    "caSacrificeSalvation":          { "title": "救済のための生贄",     "description": "未確認エリア【可能性のギャラリー】で伝説カード逆さ吊りのメシア獲得" },
-    "caFaceless":                    { "title": "顔のない者",           "description": "未確認エリア【可能性のギャラリー】で伝説カード顔のない女性獲得" },
-    "caTragdySketch":                { "title": "悲劇の下描き",         "description": "未確認エリア【晩鐘のフレスコ】ですべての欠片収集" },
-    "caBlankAnthem":                 { "title": "空白の聖歌",           "description": "固有グレード装備壁画から剥ぎ取られた瞳獲得" },
-    "caBrokenDivine":                { "title": "砕かれた神聖",         "description": "伝説装備砕かれた天使の羽獲得" },
-    "caUnknownAudition":             { "title": "未知のオーディション", "description": "カオス-【虚像の劇場】のすべての未確認エリア90%達成" },
-    "caCreditCollector":             { "title": "クレジット収集家",     "description": "累積30000クレジット獲得" },
-    "caCurtainCall":                 { "title": "カーテンコールの解放", "description": "【虚像の劇場】クリア挑戦課題すべて達成" },
-    "caTerribleEncore":              { "title": "ひどいアンコール",     "description": "カオス-【虚像の劇場】30回クリア" },
-    "caTbd":                         { "title": "アップデート予定です。", "description": "" },
-
-    "brEndCritique":   { "title": "批評を終了する",       "description": "カオス-【虚像の劇場】でキュレーター教徒3回撃破" },
-    "brDisturbArt":    { "title": "芸術活動を邪魔する",   "description": "カオス-【虚像の劇場】で下級、中級、上級カオス教徒10回撃破" },
-    "brThousandFaces": { "title": "千の顔",               "description": "【銀河に響く歌声】シーズンのすべてのボスモンスターを特定条件を満たした状態で撃破" },
-    "brCruelbone":     { "title": "クルーエルボーン",     "description": "星雲の歪み-【クルーエルボーン】難易度4歪みの重複9以上で、ペルソナカードを使用して敵を撃破" },
-    "brSerapion":      { "title": "セラフィオン",         "description": "星雲の歪み-【セラフィオン】難易度4歪みの重複9以上で、すべての戦闘員の刻印が2以上の状態で戦闘完了" },
-    "brSoulCollector": { "title": "ソウルコレクター",     "description": "星雲の歪み-【ソウルコレクター】難易度4歪みの重複9以上で、光の刻印または闇の刻印が4以上の戦闘員を編成して戦闘完了" },
-    "brStageMonopoly": { "title": "舞台独占",             "description": "【銀河に響く歌声】シーズンのすべてのモンスター撃破" },
-    "brPhantomExtra":  { "title": "虚像の端役",           "description": "カオス-【虚像の劇場】のモンスター探査度90%達成" },
-    "brTbd":           { "title": "アップデート予定です。", "description": "" },
-
-    "anCb1":  { "title": "星雲の歪み-【クルーエルボーン】撃破",           "description": "" },
-    "anCb2":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複1以上でクリア", "description": "" },
-    "anCb3":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複2以上でクリア", "description": "" },
-    "anCb4":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複3以上でクリア", "description": "" },
-    "anCb5":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複4以上でクリア", "description": "" },
-    "anCb6":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複5以上でクリア", "description": "" },
-    "anCb7":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複6以上でクリア", "description": "" },
-    "anCb8":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複7以上でクリア", "description": "" },
-    "anCb9":  { "title": "星雲の歪み-【クルーエルボーン】歪みの重複8以上でクリア", "description": "" },
-    "anCb10": { "title": "星雲の歪み-【クルーエルボーン】歪みの重複9以上でクリア", "description": "" },
-    "anSe1":  { "title": "星雲の歪み-【セラフィオン】撃破",               "description": "" },
-    "anSe2":  { "title": "星雲の歪み-【セラフィオン】歪みの重複1以上でクリア", "description": "" },
-    "anSe3":  { "title": "星雲の歪み-【セラフィオン】歪みの重複2以上でクリア", "description": "" },
-    "anSe4":  { "title": "星雲の歪み-【セラフィオン】歪みの重複3以上でクリア", "description": "" },
-    "anSe5":  { "title": "星雲の歪み-【セラフィオン】歪みの重複4以上でクリア", "description": "" },
-    "anSe6":  { "title": "星雲の歪み-【セラフィオン】歪みの重複5以上でクリア", "description": "" },
-    "anSe7":  { "title": "星雲の歪み-【セラフィオン】歪みの重複6以上でクリア", "description": "" },
-    "anSe8":  { "title": "星雲の歪み-【セラフィオン】歪みの重複7以上でクリア", "description": "" },
-    "anSe9":  { "title": "星雲の歪み-【セラフィオン】歪みの重複8以上でクリア", "description": "" },
-    "anSe10": { "title": "星雲の歪み-【セラフィオン】歪みの重複9以上でクリア", "description": "" },
-    "anSc1":  { "title": "星雲の歪み-【ソウルコレクター】撃破",           "description": "" },
-    "anSc2":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複1以上でクリア", "description": "" },
-    "anSc3":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複2以上でクリア", "description": "" },
-    "anSc4":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複3以上でクリア", "description": "" },
-    "anSc5":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複4以上でクリア", "description": "" },
-    "anSc6":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複5以上でクリア", "description": "" },
-    "anSc7":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複6以上でクリア", "description": "" },
-    "anSc8":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複7以上でクリア", "description": "" },
-    "anSc9":  { "title": "星雲の歪み-【ソウルコレクター】歪みの重複8以上でクリア", "description": "" },
-    "anSc10": { "title": "星雲の歪み-【ソウルコレクター】歪みの重複9以上でクリア", "description": "" }
+    "ws2000": {
+      "title": "【銀河に響く歌声】今週の達成スコア2000達成",
+      "description": ""
+    },
+    "ws3000": {
+      "title": "【銀河に響く歌声】今週の達成スコア3000達成",
+      "description": ""
+    },
+    "ws4000": {
+      "title": "【銀河に響く歌声】今週の達成スコア4000達成",
+      "description": ""
+    },
+    "ws6000": {
+      "title": "【銀河に響く歌声】今週の達成スコア6000達成",
+      "description": ""
+    },
+    "ws8000": {
+      "title": "【銀河に響く歌声】今週の達成スコア8000達成",
+      "description": ""
+    },
+    "mlMayor": {
+      "title": "エディニティ号の市長",
+      "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア"
+    },
+    "mlStopIt": {
+      "title": "やめてもらえますか？",
+      "description": "ストーリー-第1章【#06 本当に大切な人】クリア"
+    },
+    "mlPhantom": {
+      "title": "消せない虚像",
+      "description": "ストーリー-第1章【#08 払えなかった罪の代償】クリア"
+    },
+    "mlGoodbye": {
+      "title": "さよなら、私の英雄",
+      "description": "ストーリー-第1章【#13 さよなら、私の英雄】クリア"
+    },
+    "mlMelody1": {
+      "title": "旋律Ⅰ",
+      "description": "無欠の旋律10,000個獲得"
+    },
+    "mlMelody2": {
+      "title": "旋律Ⅱ",
+      "description": "無欠の旋律30,000個獲得"
+    },
+    "mlMelody3": {
+      "title": "旋律Ⅲ",
+      "description": "無欠の旋律50,000個獲得"
+    },
+    "mlMelody4": {
+      "title": "旋律Ⅳ",
+      "description": "無欠の旋律100,000個獲得"
+    },
+    "mlMelody5": {
+      "title": "旋律Ⅴ",
+      "description": "無欠の旋律150,000個獲得"
+    },
+    "mlRecord1": {
+      "title": "銀河に響く歌声の記録Ⅰ",
+      "description": "【銀河に響く歌声】シーズンセーブデータ46,000TB以上獲得"
+    },
+    "mlRecord2": {
+      "title": "銀河に響く歌声の記録Ⅱ",
+      "description": "【銀河に響く歌声】シーズンセーブデータ52,000TB以上獲得"
+    },
+    "mlRecord3": {
+      "title": "銀河に響く歌声の記録Ⅲ",
+      "description": "【銀河に響く歌声】シーズンセーブデータ58,000TB以上獲得"
+    },
+    "mlPersona": {
+      "title": "ペルソナ",
+      "description": "ペルソナカード12個獲得"
+    },
+    "mlLightSong": {
+      "title": "光の楽章",
+      "description": "ペルソナカードに光の刻印8回付与"
+    },
+    "mlDarkSong": {
+      "title": "闇の楽章",
+      "description": "ペルソナカードに闇の刻印8回付与"
+    },
+    "mlPerfectMethod": {
+      "title": "完璧なメソッド",
+      "description": "すべてのペルソナカード獲得"
+    },
+    "mlLightDarkSong": {
+      "title": "光と闇の歌",
+      "description": "挑戦課題【光の歌と闇の歌】を達成"
+    },
+    "mlLightOfSong": {
+      "title": "光の歌",
+      "description": "任意の戦闘員の光の刻印が5以上付与された状態でカオスクリア"
+    },
+    "mlDarkOfSong": {
+      "title": "闇の歌",
+      "description": "任意の戦闘員の闇の刻印が5以上付与された状態でカオスクリア"
+    },
+    "mlLightEquip": {
+      "title": "光が刻まれた武具",
+      "description": "装備に光の刻印8回付与"
+    },
+    "mlDarkEquip": {
+      "title": "闇が刻まれた武具",
+      "description": "装備に闇の刻印8回付与"
+    },
+    "mlAllSeason": {
+      "title": "【銀河に響く歌声】オールコレクター",
+      "description": "すべての【銀河に響く歌声】シーズンコレクター挑戦課題達成"
+    },
+    "mlSeasonA": {
+      "title": "【銀河に響く歌声】シーズンカードコレクター",
+      "description": "【銀河に響く歌声】のすべてのシーズンカード獲得"
+    },
+    "mlSeasonB": {
+      "title": "【銀河に響く歌声】シーズン装備コレクター",
+      "description": "【銀河に響く歌声】のすべてのシーズン装備獲得"
+    },
+    "mlOrchestra": {
+      "title": "銀河系のオーケストラ",
+      "description": "【銀河に響く歌声】シーズン内すべての銀河勲章挑戦課題達成"
+    },
+    "caConquest1": {
+      "title": "カオス征服Ⅰ",
+      "description": "カオス-【虚像の劇場】1段階クリア"
+    },
+    "caConquest2": {
+      "title": "カオス征服Ⅱ",
+      "description": "カオス-【虚像の劇場】2段階クリア"
+    },
+    "caConquest3": {
+      "title": "カオス征服Ⅲ",
+      "description": "カオス-【虚像の劇場】3段階クリア"
+    },
+    "caConquest4": {
+      "title": "カオス征服Ⅳ",
+      "description": "カオス-【虚像の劇場】4段階クリア"
+    },
+    "caConquest5": {
+      "title": "カオス征服Ⅴ",
+      "description": "カオス-【虚像の劇場】5段階クリア"
+    },
+    "caConquest6": {
+      "title": "カオス征服Ⅵ",
+      "description": "カオス-【虚像の劇場】6段階クリア"
+    },
+    "caConquest7": {
+      "title": "カオス征服Ⅶ",
+      "description": "カオス-【虚像の劇場】7段階クリア"
+    },
+    "caConquest8": {
+      "title": "カオス征服Ⅷ",
+      "description": "カオス-【虚像の劇場】8段階クリア"
+    },
+    "caLastHeart": {
+      "title": "最後の本心",
+      "description": "希少装備誰かの手紙獲得"
+    },
+    "caLuckyGoddess": {
+      "title": "幸運の女神",
+      "description": "未確認エリア【バラバラになった偶像】オークションで100クレジットで落札成功"
+    },
+    "caMadBid": {
+      "title": "狂気じみた落札",
+      "description": "未確認エリア【バラバラになった偶像】オークションで400クレジットで落札成功"
+    },
+    "caBurningAnthem": {
+      "title": "燃える聖歌",
+      "description": "未確認エリア【人為的な光輝】で聖歌を最後まで鑑賞する"
+    },
+    "caGiveUp": {
+      "title": "あきらめたら楽になるよ",
+      "description": "レイと一緒に未確認エリア【演出家の台本】で「終末の脚本」を確認する"
+    },
+    "caAnnotation": {
+      "title": "消せない注釈",
+      "description": "ハイデマリと一緒に未確認エリア【非情な批評家】、【栄光の記念碑】で「毀損された碑文」を確認する"
+    },
+     "caAbyssalMark": {
+      "title": "深淵の烙印",
+      "description": "未確認エリア【非情な批評家】、【栄光の記念碑】で「毀損された碑文」にインタラクションして教団のシンボルイベント確認"
+    },
+   "caArtCritic": {
+      "title": "作品批評家",
+      "description": "未確認エリア【非情な批評家】、【耽美主義者】ですべての種類の評価を行う"
+    },
+    "caDiscerningAudience": {
+      "title": "見る目のある観客",
+      "description": "未確認エリア【非情な批評家】で「芸術性を論ずる」選択肢確認"
+    },
+    "caBoringAudience": {
+      "title": "退屈な観客",
+      "description": "未確認エリア【非情な批評家】で「陳腐さを指摘する」選択肢確認"
+    },
+    "caNoiseAudience": {
+      "title": "騒音を楽しむ観客",
+      "description": "未確認エリア【非情な批評家】で「不協和音の調和について論ずる」選択肢確認"
+    },
+    "caErosionAudience": {
+      "title": "侵食の観客",
+      "description": "未確認エリア【非情な批評家】で「侵食の美学に同調する」選択肢確認"
+    },
+    "caMirrorAudience": {
+      "title": "鏡の中の観客",
+      "description": "未確認エリア【耽美主義者】で「屈折の美学について論ずる」選択肢を確認"
+    },
+    "caEmotionalAudience": {
+      "title": "感情的な観客",
+      "description": "未確認エリア【耽美主義者】で「絶望の価値を肯定する」選択肢を確認"
+    },
+    "caSymbolicAudience": {
+      "title": "象徴的な観客",
+      "description": "未確認エリア【耽美主義者】で「垂直的な構造を讃える」選択肢を確認"
+    },
+    "caEridonaGlory": {
+      "title": "エリドナの栄光",
+      "description": "カオス-【虚像の劇場】ですべての情報型選択肢、相互作用選択肢確認"
+    },
+    "caHiddenWork": {
+      "title": "隠された遺作",
+      "description": "未確認エリア【可能性のギャラリー】で作品を覗き込む"
+    },
+    "caLastExhibition": {
+      "title": "批評家の最後の展示",
+      "description": "折れた黄金の羽根ペン獲得後、【可能性のギャラリー】で「作品について聞く」選択肢確認"
+    },
+    "caAllRelics": {
+      "title": "いわくのない遺品はない",
+      "description": "未確認エリア【遺品露天商】で遺品の事情を確認する"
+    },
+    "caStopAdmiring": {
+      "title": "憧れるのはやめましょう",
+      "description": "未確認エリア【歪んだ恋心】で誰かの観察日誌確認"
+    },
+    "caEternalNoon": {
+      "title": "抉り取られた永遠の正午",
+      "description": "未確認エリア【非情な批評家】、【栄光の記念碑】で「毀損された碑文」を確認する"
+    },
+    "caArtIsHard": {
+      "title": "芸術は難しく、人生は短い",
+      "description": "未確認エリア【演出家の台本】で「終末の脚本」を確認する"
+    },
+    "caAllTragedy": {
+      "title": "すべての悲劇は本心だった",
+      "description": "未確認エリア【引き裂かれた本心】ですべてのインタラクション確認"
+    },
+    "caFirstErased": {
+      "title": "真っ先に消される記録",
+      "description": "未確認エリア【引き裂かれた本心】で「剥製になった心臓の告解」を確認する"
+    },
+    "caWayToUnite": {
+      "title": "一つになれる方法",
+      "description": "未確認エリア【引き裂かれた本心】で「唯一の光、メシアへ」を確認する"
+    },
+    "caMostValuable": {
+      "title": "最も価値のある作品",
+      "description": "未確認エリア【引き裂かれた本心】で「私の頑固な芸術家へ」を確認する"
+    },
+    "caIncompleteMasterpiece": {
+      "title": "不完全な傑作の完成",
+      "description": "未確認エリア【バラバラになった偶像】で全ての作品の説明を聞く"
+    },
+    "caStuffedBreath": {
+      "title": "剥製にされた息の軌跡",
+      "description": "未確認エリア【バラバラになった偶像】で「メシアのトルソー」作品についての説明を求める"
+    },
+    "caScratchedVoid": {
+      "title": "引っかかれた虚空の記録",
+      "description": "未確認エリア【バラバラになった偶像】で「メシアの左手の彫像」作品についての説明を求める"
+    },
+    "caParadiseSilence": {
+      "title": "楽園を宿した沈黙",
+      "description": "未確認エリア【バラバラになった偶像】で「メシアの下顎の彫像」作品についての説明を求める"
+    },
+    "caNamelessArtist": {
+      "title": "名もなき芸術家",
+      "description": "カオス-【虚像の劇場】のすべての作品収集"
+    },
+    "caCriticLegacy": {
+      "title": "批評家の遺産",
+      "description": "希少装備折れた黄金の羽根ペン獲得"
+    },
+    "caBetrayalMoment": {
+      "title": "裏切りの瞬間",
+      "description": "希少装備片方だけの結婚指輪獲得"
+    },
+    "caIncomprehensibleObsession": {
+      "title": "理解できない執着",
+      "description": "伝説装備理解できない神物獲得"
+    },
+    "caMessiahBeliever": {
+      "title": "メシアの信者",
+      "description": "未確認エリア【バラバラになった偶像】でオークションに参加してすべての作品獲得"
+    },
+    "caMostDesperate": {
+      "title": "最も壮絶な絶望",
+      "description": "未確認エリア【バラバラになった偶像】でオークションに参加して華奢な鎖骨獲得"
+    },
+    "caEternalAnthem": {
+      "title": "永遠の聖歌",
+      "description": "未確認エリア【バラバラになった偶像】でオークションに参加して渇望する左手獲得"
+    },
+    "caStuffedChest": {
+      "title": "剥製にされた胸部",
+      "description": "未確認エリア【バラバラになった偶像】でオークションに参加して聖歌を歌う唇獲得"
+    },
+    "caNoiseCondutor": {
+      "title": "騒音の指揮者",
+      "description": "未確認エリア【音響制御室】で高音、低音、静寂のすべての選択肢確認"
+    },
+    "caAriaHigh": {
+      "title": "天井を切り裂くアリア",
+      "description": "未確認エリア【音響制御室】で高音周波数を選択する"
+    },
+    "caAbyssVibration": {
+      "title": "深淵よりの振動",
+      "description": "未確認エリア【音響制御室】で低音周波数を選択する"
+    },
+    "caBlankScore": {
+      "title": "空白で書いた楽譜",
+      "description": "未確認エリア【音響制御室】で静寂周波数を選択する"
+    },
+    "caPhantomCollector": {
+      "title": "虚像の収集家",
+      "description": "未確認エリア【可能性のギャラリー】ですべての絵収集"
+    },
+    "caPureCorruption": {
+      "title": "純粋の堕落",
+      "description": "未確認エリア【可能性のギャラリー】で伝説カード腐りゆくリンゴと少女獲得"
+    },
+    "caSacrificeSalvation": {
+      "title": "救済のための生贄",
+      "description": "未確認エリア【可能性のギャラリー】で伝説カード逆さ吊りのメシア獲得"
+    },
+    "caFaceless": {
+      "title": "顔のない者",
+      "description": "未確認エリア【可能性のギャラリー】で伝説カード顔のない女性獲得"
+    },
+    "caTragdySketch": {
+      "title": "悲劇の下描き",
+      "description": "未確認エリア【晩鐘のフレスコ】ですべての欠片収集"
+    },
+    "caBlankAnthem": {
+      "title": "空白の聖歌",
+      "description": "固有グレード装備壁画から剥ぎ取られた瞳獲得"
+    },
+    "caBrokenDivine": {
+      "title": "砕かれた神聖",
+      "description": "伝説装備砕かれた天使の羽獲得"
+    },
+    "caUnknownAudition": {
+      "title": "未知のオーディション",
+      "description": "カオス-【虚像の劇場】のすべての未確認エリア90%達成"
+    },
+    "caCreditCollector": {
+      "title": "クレジット収集家",
+      "description": "累積30000クレジット獲得"
+    },
+    "caCurtainCall": {
+      "title": "カーテンコールの解放",
+      "description": "【虚像の劇場】クリア挑戦課題すべて達成"
+    },
+    "caTerribleEncore": {
+      "title": "ひどいアンコール",
+      "description": "カオス-【虚像の劇場】30回クリア"
+    },
+    "caTbd": {
+      "title": "アップデート予定です。",
+      "description": ""
+    },
+    "brEndCritique": {
+      "title": "批評を終了する",
+      "description": "カオス-【虚像の劇場】でキュレーター教徒3回撃破"
+    },
+    "brDisturbArt": {
+      "title": "芸術活動を邪魔する",
+      "description": "カオス-【虚像の劇場】で下級、中級、上級カオス教徒10回撃破"
+    },
+    "brThousandFaces": {
+      "title": "千の顔",
+      "description": "【銀河に響く歌声】シーズンのすべてのボスモンスターを特定条件を満たした状態で撃破"
+    },
+    "brCruelbone": {
+      "title": "クルーエルボーン",
+      "description": "星雲の歪み-【クルーエルボーン】難易度4歪みの重複9以上で、ペルソナカードを使用して敵を撃破"
+    },
+    "brSerapion": {
+      "title": "セラフィオン",
+      "description": "星雲の歪み-【セラフィオン】難易度4歪みの重複9以上で、すべての戦闘員の刻印が2以上の状態で戦闘完了"
+    },
+    "brSoulCollector": {
+      "title": "ソウルコレクター",
+      "description": "星雲の歪み-【ソウルコレクター】難易度4歪みの重複9以上で、光の刻印または闇の刻印が4以上の戦闘員を編成して戦闘完了"
+    },
+    "brHatredCondemnation": {
+      "title": "恨みと断罪の果て",
+      "description": "カオス【虚像の劇場】中心部で恨みの断罪者との戦闘中、戦闘員が2回以上崩壊した状態で完了"
+    },
+    "brStageMonopoly": {
+      "title": "舞台独占",
+      "description": "【銀河に響く歌声】シーズンのすべてのモンスター撃破"
+    },
+    "brPhantomExtra": {
+      "title": "虚像の端役",
+      "description": "カオス-【虚像の劇場】のモンスター探査度90%達成"
+    },
+    "brHeroNightmare": {
+      "title": "英雄の悪夢",
+      "description": "カオス【虚像の劇場】中心部で恨みの断罪者撃破"
+    },
+    "brTbd": {
+      "title": "アップデート予定です。",
+      "description": ""
+    },
+    "anCb1": {
+      "title": "星雲の歪み-【クルーエルボーン】撃破",
+      "description": ""
+    },
+    "anCb2": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複1以上でクリア",
+      "description": ""
+    },
+    "anCb3": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複2以上でクリア",
+      "description": ""
+    },
+    "anCb4": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複3以上でクリア",
+      "description": ""
+    },
+    "anCb5": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複4以上でクリア",
+      "description": ""
+    },
+    "anCb6": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複5以上でクリア",
+      "description": ""
+    },
+    "anCb7": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複6以上でクリア",
+      "description": ""
+    },
+    "anCb8": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複7以上でクリア",
+      "description": ""
+    },
+    "anCb9": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複8以上でクリア",
+      "description": ""
+    },
+    "anCb10": {
+      "title": "星雲の歪み-【クルーエルボーン】歪みの重複9以上でクリア",
+      "description": ""
+    },
+    "anSe1": {
+      "title": "星雲の歪み-【セラフィオン】撃破",
+      "description": ""
+    },
+    "anSe2": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複1以上でクリア",
+      "description": ""
+    },
+    "anSe3": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複2以上でクリア",
+      "description": ""
+    },
+    "anSe4": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複3以上でクリア",
+      "description": ""
+    },
+    "anSe5": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複4以上でクリア",
+      "description": ""
+    },
+    "anSe6": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複5以上でクリア",
+      "description": ""
+    },
+    "anSe7": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複6以上でクリア",
+      "description": ""
+    },
+    "anSe8": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複7以上でクリア",
+      "description": ""
+    },
+    "anSe9": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複8以上でクリア",
+      "description": ""
+    },
+    "anSe10": {
+      "title": "星雲の歪み-【セラフィオン】歪みの重複9以上でクリア",
+      "description": ""
+    },
+    "anSc1": {
+      "title": "星雲の歪み-【ソウルコレクター】撃破",
+      "description": ""
+    },
+    "anSc2": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複1以上でクリア",
+      "description": ""
+    },
+    "anSc3": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複2以上でクリア",
+      "description": ""
+    },
+    "anSc4": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複3以上でクリア",
+      "description": ""
+    },
+    "anSc5": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複4以上でクリア",
+      "description": ""
+    },
+    "anSc6": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複5以上でクリア",
+      "description": ""
+    },
+    "anSc7": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複6以上でクリア",
+      "description": ""
+    },
+    "anSc8": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複7以上でクリア",
+      "description": ""
+    },
+    "anSc9": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複8以上でクリア",
+      "description": ""
+    },
+    "anSc10": {
+      "title": "星雲の歪み-【ソウルコレクター】歪みの重複9以上でクリア",
+      "description": ""
+    }
   },
   "progress": {
     "done": "完了"
@@ -184,12 +581,16 @@
       "glory_of_eridona": "エリドナの栄光",
       "nameless_artist": "名もなき芸術家",
       "credit_collector": "クレジット収集家",
-       "release_of_the_curtain_call": "カーテンコールの解放",
-       "singing_voice_resonates_across_the_galaxy": "銀河に響く歌声",
-       "unknown_audition": "未知のオーディション",
-       "thousand_faces": "千の顔",
-       "monopoly_on_stage": "舞台独占"
+      "release_of_the_curtain_call": "カーテンコールの解放",
+      "singing_voice_resonates_across_the_galaxy": "銀河に響く歌声",
+      "unknown_audition": "未知のオーディション",
+      "thousand_faces": "千の顔",
+      "monopoly_on_stage": "舞台独占",
+      "tit_in_a_fairy_tale": "童話の中のエナガ",
+      "claras_wand": "クララのワンド",
+      "adelheid": "アーデルハイト",
+      "collapsed_elinad": "崩れたエリナド",
+      "collapsed_elinad_profile": "崩れたエリナドのプロフィール"
     }
   }
 }
-
