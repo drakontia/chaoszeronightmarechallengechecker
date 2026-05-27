@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { ChallengeHeader } from "@/components/ChallengeHeader";
 import { ChallengeSidebar } from "@/components/ChallengeSidebar";
 import { ChallengeTaskList } from "@/components/ChallengeTaskList";
+import { Footer } from "@/components/Footer";
 import { challengeTabs, defaultSeasonId, getTabCompletion, seasons } from "@/lib";
 import { useChallengeProgress } from "@/hooks";
 import { ChallengeCategory } from "@/types";
@@ -82,6 +83,8 @@ export function ChallengeCheckerPage() {
           />
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
