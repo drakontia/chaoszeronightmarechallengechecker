@@ -1,6 +1,42 @@
 import { Reward, RewardKey } from "@/types";
 
 const REWARD_MAP: Record<RewardKey, { image: string; altKey: string }> = {
+  crystal: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.crystal",
+  },
+  unit: {
+    image: "/rewards/unit.png",
+    altKey: "rewards.unit",
+  },
+  support_data: {
+    image: "/rewards/support_data.png",
+    altKey: "rewards.support_data",
+  },
+  battle_memory: {
+    image: "/rewards/battle_memory.png",
+    altKey: "rewards.battle_memory",
+  },
+  potencial_disk: {
+    image: "/rewards/potencial_disk.png",
+    altKey: "rewards.potencial_disk",
+  },
+  universal_support_certificate: {
+    image: "/rewards/universal_support_certificate.png",
+    altKey: "rewards.universal_support_certificate",
+  },
+  universal_tactics_certificate: {
+    image: "/rewards/universal_tactics_certificate.png",
+    altKey: "rewards.universal_tactics_certificate",
+  },
+  memory_traces: {
+    image: "/rewards/memory_traces.png",
+    altKey: "rewards.memory_traces",
+  },
+  memory_particles: {
+    image: "/rewards/memory_particles.png",
+    altKey: "rewards.memory_particles",
+  },
   flawless_melody: {
     image: "/rewards/season3/flawless_melody.png",
     altKey: "rewards.season3.flawless_melody",
@@ -17,17 +53,13 @@ const REWARD_MAP: Record<RewardKey, { image: string; altKey: string }> = {
     image: "/rewards/season3/hidemarie.png",
     altKey: "rewards.season3.hidemarie",
   },
-  support_data: {
-    image: "/rewards/support_data.png",
-    altKey: "rewards.support_data",
-  },
   all_collector: {
     image: "/rewards/season3/all_collector.png",
     altKey: "rewards.season3.all_collector",
   },
-  "singing_voice_resonates_across the_galaxy": {
-    image: "/rewards/season3/singing_voice_resonates_across the_galaxy.png",
-    altKey: "rewards.season3.singing_voice_resonates_across the_galaxy",
+  singing_voice_resonates_across_the_galaxy: {
+    image: "/rewards/season3/singing_voice_resonates_across_the_galaxy.png",
+    altKey: "rewards.season3.singing_voice_resonates_across_the_galaxy",
   },
   glory_of_elinad: {
     image: "/rewards/season3/glory_of_elinad.png",
@@ -56,6 +88,26 @@ const REWARD_MAP: Record<RewardKey, { image: string; altKey: string }> = {
   monopoly_on_stage: {
     image: "/rewards/season3/monopoly_on_stage.png",
     altKey: "rewards.season3.monopoly_on_stage",
+  },
+  tit_in_a_fairy_tale: {
+    image: "/rewards/season3/tit_in_a_fairy_tale.png",
+    altKey: "rewards.season3.tit_in_a_fairy_tale",
+  },
+  claras_wand: {
+    image: "/rewards/season3/clara_s_wand.png",
+    altKey: "rewards.season3.clara_s_wand",
+  },
+  adelheid: {
+    image: "/rewards/season3/adelheid.png",
+    altKey: "rewards.season3.adelheid",
+  },
+  collapsed_elinad: {
+    image: "/rewards/season3/collapsed_elinad.png",
+    altKey: "rewards.season3.collapsed_elinad",
+  },
+  collapsed_elinad_profile: {
+    image: "/rewards/season3/collapsed_elinad_profile.png",
+    altKey: "rewards.season3.collapsed_elinad_profile",
   },
 };
 
