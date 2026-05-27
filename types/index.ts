@@ -8,20 +8,35 @@ export type ChallengeCategory =
 export type ChallengeStatus = "manual" | "derived";
 
 export type RewardKey =
+  | "crystal"
+  | "unit"
+  | "support_data"
+  | "battle_memory"
+  | "memory_particles"
+  | "memory_traces"
+  | "potencial_disk"
+  | "universal_support_certificate"
+  | "universal_tactics_certificate"
   | "flawless_melody"
   | "hidemarie_sword"
   | "auroras_coat_of_arms"
   | "hidemarie"
-  | "support_data"
+  | "perfect_method"
+  | "song_of_light_and_darkness"
   | "all_collector"
-  | "singing_voice_resonates_across the_galaxy"
+  | "singing_voice_resonates_across_the_galaxy"
   | "glory_of_elinad"
   | "nameless_artist"
   | "unknown_audition"
   | "credit_collector"
   | "release_of_the_curtain_call"
   | "thousand_faces"
-  | "monopoly_on_stage";
+  | "monopoly_on_stage"
+  | "tit_in_a_fairy_tale"
+  | "claras_wand"
+  | "adelheid"
+  | "collapsed_elinad"
+  | "collapsed_elinad_profile";
 
 export interface Reward {
   image: string;
