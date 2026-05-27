@@ -12,6 +12,19 @@ export function ChallengeHeader() {
       </div>
 
       <div className="flex items-center gap-4 self-start">
+        <Link
+          href="https://czn-deck-builder.drakontia.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t("site.deckBuilder")}
+          className="inline-flex h-8 items-center gap-1.5 rounded-md border border-zinc-300 px-3 text-xs font-medium text-zinc-700 transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-600"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" aria-hidden fill="none" stroke="currentColor" strokeWidth={2}>
+            <rect x="2" y="3" width="20" height="14" rx="2" />
+            <path d="M8 21h8M12 17v4" />
+          </svg>
+          {t("site.deckBuilder")}
+        </Link>
         <iframe
           src="https://github.com/sponsors/drakontia/button"
           title="Sponsor drakontia"
