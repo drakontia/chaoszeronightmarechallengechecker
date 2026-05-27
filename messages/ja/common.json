@@ -45,19 +45,35 @@
     },
     "mlMayor": {
       "title": "エディニティ号の市長",
-      "description": "ストーリー-第1章【#02 市長ハイデマリ】クリア"
+      "description": "ストーリー-第1章【#02 市長ハイデマリ】完了"
     },
     "mlStopIt": {
       "title": "やめてもらえますか？",
-      "description": "ストーリー-第1章【#06 本当に大切な人】クリア"
+      "description": "ストーリー-第1章【#06 本当に大切な人】完了"
     },
     "mlPhantom": {
       "title": "消せない虚像",
-      "description": "ストーリー-第1章【#08 払えなかった罪の代償】クリア"
+      "description": "ストーリー-第1章【#08 払えなかった罪の代償】完了"
     },
     "mlGoodbye": {
       "title": "さよなら、私の英雄",
-      "description": "ストーリー-第1章【#13 さよなら、私の英雄】クリア"
+      "description": "ストーリー-第1章【#13 さよなら、私の英雄】完了"
+    },
+    "mlFailyTale": {
+      "title": "おとぎ話…好き？",
+      "description": "ストーリー-第2章【#02 新しい友達】完了"
+    },
+    "mlFriend": {
+      "title": "友だちの、証",
+      "description": "ストーリー-第2章【#04 疑いの種】完了"
+    },
+    "mlPajamas": {
+      "title": "みんなでパジャマ",
+      "description": "ストーリー-第2章【#06 夢の中へ】完了"
+    },
+    "mlBrave": {
+      "title": "勇気のある子",
+      "description": "ストーリー-第2章【#08 勇気の証明】完了"
     },
     "mlMelody1": {
       "title": "旋律Ⅰ",

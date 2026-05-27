@@ -203,7 +203,9 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlRecord1.title",
             descriptionKey: "tasks.mlRecord1.description",
-            rewards: [rewardOf("flawless_melody")],
+            rewards: [
+              rewardOf("flawless_melody", 200),
+              rewardOf("memory_traces", 50),],
             progressMax: 46000,
           },
           {
@@ -211,7 +213,10 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlRecord2.title",
             descriptionKey: "tasks.mlRecord2.description",
-            rewards: [rewardOf("flawless_melody")],
+            rewards: [
+              rewardOf("flawless_melody", 300),
+              rewardOf("memory_traces", 50),
+            ],
             progressMax: 52000,
           },
           {
@@ -219,7 +224,10 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlRecord3.title",
             descriptionKey: "tasks.mlRecord3.description",
-            rewards: [rewardOf("flawless_melody")],
+            rewards: [
+              rewardOf("flawless_melody", 400),
+              rewardOf("memory_traces", 50),
+            ],
             progressMax: 58000,
           },
           // ペルソナ
@@ -246,6 +254,7 @@ export const seasons: Season[] = [
             status: "manual",
             titleKey: "tasks.mlPerfectMethod.title",
             descriptionKey: "tasks.mlPerfectMethod.description",
+            rewards: [rewardOf("perfect_method")],
           },
           // 光と闇の歌（derived）
           {
@@ -254,6 +263,7 @@ export const seasons: Season[] = [
             titleKey: "tasks.mlLightDarkSong.title",
             descriptionKey: "tasks.mlLightDarkSong.description",
             childIds: ["ml-light-of-song", "ml-dark-of-song"],
+            rewards: [rewardOf("song_of_light_and_darkness")],
           },
           {
             id: "ml-light-of-song",
@@ -261,6 +271,10 @@ export const seasons: Season[] = [
             titleKey: "tasks.mlLightOfSong.title",
             descriptionKey: "tasks.mlLightOfSong.description",
             isChild: true,
+            rewards: [
+              rewardOf("flawless_melody", 200),
+              rewardOf("potencial_disk", 18)
+            ],
           },
           {
             id: "ml-dark-of-song",
@@ -268,6 +282,10 @@ export const seasons: Season[] = [
             titleKey: "tasks.mlDarkOfSong.title",
             descriptionKey: "tasks.mlDarkOfSong.description",
             isChild: true,
+            rewards: [
+              rewardOf("flawless_melody", 200),
+              rewardOf("potencial_disk", 18)
+            ],
           },
           // 刻印装備
           {

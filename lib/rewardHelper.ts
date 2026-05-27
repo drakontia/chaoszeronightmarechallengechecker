@@ -53,6 +53,14 @@ const REWARD_MAP: Record<RewardKey, { image: string; altKey: string }> = {
     image: "/rewards/season3/hidemarie.png",
     altKey: "rewards.season3.hidemarie",
   },
+  perfect_method: {
+    image: "/rewards/season3/perfect_method.png",
+    altKey: "rewards.season3.perfect_method",
+  },
+  song_of_light_and_darkness: {
+    image: "/rewards/season3/song_of_light_and_darkness.png",
+    altKey: "rewards.season3.song_of_light_and_darkness",
+  },
   all_collector: {
     image: "/rewards/season3/all_collector.png",
     altKey: "rewards.season3.all_collector",

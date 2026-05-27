@@ -21,6 +21,8 @@ export type RewardKey =
   | "hidemarie_sword"
   | "auroras_coat_of_arms"
   | "hidemarie"
+  | "perfect_method"
+  | "song_of_light_and_darkness"
   | "all_collector"
   | "singing_voice_resonates_across_the_galaxy"
   | "glory_of_elinad"
