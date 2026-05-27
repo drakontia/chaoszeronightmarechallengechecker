@@ -16,7 +16,7 @@ describe("Footer", () => {
   test("コピーライト表記が表示される", () => {
     render(<Footer />);
     expect(screen.getByText(/ChaosZeroNightmare Challenge Checker/)).toBeTruthy();
-    expect(screen.getByText(/2025 Drakontia/)).toBeTruthy();
+    expect(screen.getByText(/2026 Drakontia/)).toBeTruthy();
   });
 
   test("GitHub リポジトリへのリンクが存在する", () => {

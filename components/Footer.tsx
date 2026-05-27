@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="mt-4 mb-0 text-center text-sm text-zinc-500 flex flex-wrap items-center justify-center gap-2">
-      <span>ChaosZeroNightmare Challenge Checker © 2025 Drakontia</span>
+      <span>ChaosZeroNightmare Challenge Checker © 2026 Drakontia</span>
       <span className="hidden sm:inline">·</span>
       <Link
         href="https://github.com/drakontia/ChaosZeroNightmareChallengeChecker"
