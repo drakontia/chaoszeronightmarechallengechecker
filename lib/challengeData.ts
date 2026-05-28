@@ -498,7 +498,6 @@ export const seasons: Season[] = [
               "ca-stuffed-chest",
               "ca-aria-high",
               "ca-abyss-vibration",
-              "ca-tbd-2",
               "ca-blank-score",
               "ca-pure-corruption",
               "ca-sacrifice-salvation",
@@ -508,7 +507,6 @@ export const seasons: Season[] = [
             ],
             rewards: [rewardOf("nameless_artist")],
           },
-          { id: "ca-tbd-2", status: "manual", titleKey: "tasks.caTbd.title", descriptionKey: "tasks.caTbd.description", isChild: true },
           {
             id: "ca-unknown-audition", status: "manual", titleKey: "tasks.caUnknownAudition.title", descriptionKey: "tasks.caUnknownAudition.description",
             rewards: [rewardOf("unknown_audition")],
