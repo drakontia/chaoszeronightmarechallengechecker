@@ -146,6 +146,42 @@ export const seasons: Season[] = [
               rewardOf("adelheid")
             ],
           },
+          // シーズン3後半追加任務
+          {
+            id: "ml-moving-melody",
+            status: "manual",
+            titleKey: "tasks.mlMovingMelody.title",
+            descriptionKey: "tasks.mlMovingMelody.description",
+            rewards: [rewardOf("flawless_melody", 100), rewardOf("aria_penlight")],
+          },
+          {
+            id: "ml-galaxy-idol",
+            status: "manual",
+            titleKey: "tasks.mlGalaxyIdol.title",
+            descriptionKey: "tasks.mlGalaxyIdol.description",
+            rewards: [rewardOf("flawless_melody", 100), rewardOf("tenebrea_penlight")],
+          },
+          {
+            id: "ml-song-through-galaxy",
+            status: "manual",
+            titleKey: "tasks.mlSongThroughGalaxy.title",
+            descriptionKey: "tasks.mlSongThroughGalaxy.description",
+            rewards: [rewardOf("flawless_melody", 100), rewardOf("singing_voice_tenebrea")],
+          },
+          {
+            id: "ml-see-you-again",
+            status: "manual",
+            titleKey: "tasks.mlSeeYouAgain.title",
+            descriptionKey: "tasks.mlSeeYouAgain.description",
+            rewards: [rewardOf("flawless_melody", 100), rewardOf("unit", 50000)],
+          },
+          {
+            id: "ml-our-performance",
+            status: "manual",
+            titleKey: "tasks.mlOurPerformance.title",
+            descriptionKey: "tasks.mlOurPerformance.description",
+            rewards: [rewardOf("edinity_profile"), rewardOf("edinity")],
+          },
           // 旋律コレクション
           {
             id: "ml-melody-1",
@@ -459,7 +495,7 @@ export const seasons: Season[] = [
           },
           { id: "ca-blank-anthem", status: "manual", titleKey: "tasks.caBlankAnthem.title", descriptionKey: "tasks.caBlankAnthem.description", isChild: true },
           { id: "ca-broken-divine", status: "manual", titleKey: "tasks.caBrokenDivine.title", descriptionKey: "tasks.caBrokenDivine.description", isChild: true },
-          // エリドナの栄光（derived: 6 children）
+          // エリナドの栄光（derived）
           {
             id: "ca-eridona-glory",
             status: "derived",
@@ -472,7 +508,7 @@ export const seasons: Season[] = [
               "ca-stop-admiring",
               "ca-eternal-noon",
               "ca-art-is-hard",
-              "ca-tbd-3",
+              "ca-vivid-than-burning-city",
               "ca-first-erased",
               "ca-way-to-unite",
               "ca-most-valuable",
@@ -482,7 +518,49 @@ export const seasons: Season[] = [
             ],
             rewards: [rewardOf("glory_of_elinad")],
           },
-          { id: "ca-tbd-3", status: "manual", titleKey: "tasks.caTbd.title", descriptionKey: "tasks.caTbd.description", isChild: true },
+          {
+            id: "ca-invitation-beyond-mist",
+            status: "manual",
+            titleKey: "tasks.caInvitationBeyondMist.title",
+            descriptionKey: "tasks.caInvitationBeyondMist.description",
+            isChild: true,
+            rewards: [rewardOf("support_data", 5), rewardOf("battle_memory", 10)],
+          },
+          {
+            id: "ca-vivid-than-burning-city",
+            status: "manual",
+            titleKey: "tasks.caVividThanBurningCity.title",
+            descriptionKey: "tasks.caVividThanBurningCity.description",
+            isChild: true,
+          },
+          {
+            id: "ca-script-vacant-seat",
+            status: "manual",
+            titleKey: "tasks.caScriptVacantSeat.title",
+            descriptionKey: "tasks.caScriptVacantSeat.description",
+            rewards: [rewardOf("support_data", 5), rewardOf("battle_memory", 10)],
+          },
+          {
+            id: "ca-unscripted-ending",
+            status: "manual",
+            titleKey: "tasks.caUnscriptedEnding.title",
+            descriptionKey: "tasks.caUnscriptedEnding.description",
+            rewards: [rewardOf("support_data", 5), rewardOf("battle_memory", 10)],
+          },
+          {
+            id: "ca-you-too-the-same",
+            status: "manual",
+            titleKey: "tasks.caYouTooTheSame.title",
+            descriptionKey: "tasks.caYouTooTheSame.description",
+            rewards: [rewardOf("support_data", 5), rewardOf("battle_memory", 10)],
+          },
+          {
+            id: "ca-love-is-a-lie",
+            status: "manual",
+            titleKey: "tasks.caLoveIsALie.title",
+            descriptionKey: "tasks.caLoveIsALie.description",
+            rewards: [rewardOf("support_data", 5), rewardOf("battle_memory", 10)],
+          },
           // 名もなき芸術家（derived: 14 children including shared）
           {
             id: "ca-nameless-artist",
@@ -521,11 +599,19 @@ export const seasons: Season[] = [
             status: "derived",
             titleKey: "tasks.caCurtainCall.title",
             descriptionKey: "tasks.caCurtainCall.description",
-            childIds: ["ca-terrible-encore", "ca-tbd-1"],
+            childIds: ["ca-terrible-encore", "ca-conductor-finale"],
             rewards: [rewardOf("release_of_the_curtain_call")],
           },
           { id: "ca-terrible-encore", status: "manual", titleKey: "tasks.caTerribleEncore.title", descriptionKey: "tasks.caTerribleEncore.description", isChild: true },
-          { id: "ca-tbd-1", status: "manual", titleKey: "tasks.caTbd.title", descriptionKey: "tasks.caTbd.description", isChild: true },
+          {
+            id: "ca-conductor-finale",
+            status: "manual",
+            titleKey: "tasks.caConductorFinale.title",
+            descriptionKey: "tasks.caConductorFinale.description",
+            isChild: true,
+            rewards: [rewardOf("flawless_melody", 200)],
+            progressMax: 6,
+          },
         ],
       },
 
@@ -553,7 +639,13 @@ export const seasons: Season[] = [
             status: "derived",
             titleKey: "tasks.brThousandFaces.title",
             descriptionKey: "tasks.brThousandFaces.description",
-            childIds: ["br-cruelbone", "br-serapion", "br-soul-collector", "br-hatred-condemnation", "br-tbd-5"],
+            childIds: [
+              "br-cruelbone",
+              "br-serapion",
+              "br-soul-collector",
+              "br-hatred-condemnation",
+              "br-encroaching-blackout",
+            ],
             rewards: [rewardOf("thousand_faces")],
           },
           {
@@ -572,14 +664,21 @@ export const seasons: Season[] = [
             id: "br-hatred-condemnation", status: "manual", titleKey: "tasks.brHatredCondemnation.title", descriptionKey: "tasks.brHatredCondemnation.description", isChild: true,
             rewards: [rewardOf("flawless_melody", 200)],
           },
-          { id: "br-tbd-5", status: "manual", titleKey: "tasks.brTbd.title", descriptionKey: "tasks.brTbd.description", isChild: true },
+          {
+            id: "br-encroaching-blackout",
+            status: "manual",
+            titleKey: "tasks.brEncroachingBlackout.title",
+            descriptionKey: "tasks.brEncroachingBlackout.description",
+            isChild: true,
+            rewards: [rewardOf("flawless_melody", 200)],
+          },
           // 舞台独占（derived: 3 children）
           {
             id: "br-stage-monopoly",
             status: "derived",
             titleKey: "tasks.brStageMonopoly.title",
             descriptionKey: "tasks.brStageMonopoly.description",
-            childIds: ["br-phantom-extra", "br-hero-nightmare", "br-tbd-3"],
+            childIds: ["br-phantom-extra", "br-hero-nightmare", "br-arrogance-remnant"],
             rewards: [rewardOf("monopoly_on_stage")],
 
           },
@@ -591,7 +690,14 @@ export const seasons: Season[] = [
               rewardOf("collapsed_elinad_profile")
             ],
           },
-          { id: "br-tbd-3", status: "manual", titleKey: "tasks.brTbd.title", descriptionKey: "tasks.brTbd.description", isChild: true },
+          {
+            id: "br-arrogance-remnant",
+            status: "manual",
+            titleKey: "tasks.brArroganceRemnant.title",
+            descriptionKey: "tasks.brArroganceRemnant.description",
+            isChild: true,
+            rewards: [rewardOf("phantom_theater_profile"), rewardOf("phantom_theater")],
+          },
         ],
       },
 

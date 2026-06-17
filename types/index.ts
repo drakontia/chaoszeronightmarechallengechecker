@@ -36,7 +36,14 @@ export type RewardKey =
   | "claras_wand"
   | "adelheid"
   | "collapsed_elinad"
-  | "collapsed_elinad_profile";
+  | "collapsed_elinad_profile"
+  | "aria_penlight"
+  | "tenebrea_penlight"
+  | "singing_voice_tenebrea"
+  | "edinity_profile"
+  | "edinity"
+  | "phantom_theater_profile"
+  | "phantom_theater";
 
 export interface Reward {
   image: string;

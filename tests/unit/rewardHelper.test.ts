@@ -38,6 +38,16 @@ describe("rewardOf", () => {
     expect(reward.altKey).toBe("rewards.season3.singing_voice_resonates_across_the_galaxy");
   });
 
+  test("maps phantom theater rewards to temporary image paths", () => {
+    const profile = rewardOf("phantom_theater_profile");
+    const theater = rewardOf("phantom_theater");
+
+    expect(profile.image).toBe("/rewards/crystal.png");
+    expect(profile.altKey).toBe("rewards.season3.phantom_theater_profile");
+    expect(theater.image).toBe("/rewards/crystal.png");
+    expect(theater.altKey).toBe("rewards.season3.phantom_theater");
+  });
+
   test("each reward key maps to a unique image path", () => {
     const keys = [
       "flawless_melody",

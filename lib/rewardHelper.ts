@@ -117,6 +117,34 @@ const REWARD_MAP: Record<RewardKey, { image: string; altKey: string }> = {
     image: "/rewards/season3/collapsed_elinad_profile.png",
     altKey: "rewards.season3.collapsed_elinad_profile",
   },
+  aria_penlight: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.aria_penlight",
+  },
+  tenebrea_penlight: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.tenebrea_penlight",
+  },
+  singing_voice_tenebrea: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.singing_voice_tenebrea",
+  },
+  edinity_profile: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.edinity_profile",
+  },
+  edinity: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.edinity",
+  },
+  phantom_theater_profile: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.phantom_theater_profile",
+  },
+  phantom_theater: {
+    image: "/rewards/crystal.png",
+    altKey: "rewards.season3.phantom_theater",
+  },
 };
 
 export function rewardOf(key: RewardKey, amount?: number): Reward {
