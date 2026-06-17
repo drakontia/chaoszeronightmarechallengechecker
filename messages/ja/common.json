@@ -76,6 +76,26 @@
       "title": "勇気のある子",
       "description": "ストーリー-第2章【#08 勇気の証明】完了"
     },
+    "mlMovingMelody": {
+      "title": "心を動かす旋律",
+      "description": "ストーリー-第3章【#02 アイドルの誇りⅠ】完了"
+    },
+    "mlGalaxyIdol": {
+      "title": "銀河一のアイドル",
+      "description": "ストーリー-第3章【#06 アイドルの誇りⅡ】完了"
+    },
+    "mlSongThroughGalaxy": {
+      "title": "銀河に響く歌声",
+      "description": "ストーリー-第3章【#012 銀河に響く歌声】完了"
+    },
+    "mlSeeYouAgain": {
+      "title": "また会えるはずだから",
+      "description": "ストーリー-第3章【#13 霧の中の女性】完了"
+    },
+    "mlOurPerformance": {
+      "title": "私たちの公演",
+      "description": "ストーリー-第3章【エピローグⅡ - 銀河のアイドル】完了"
+    },
     "mlMelody1": {
       "title": "旋律Ⅰ",
       "description": "無欠の旋律10,000個獲得"
@@ -253,7 +273,7 @@
       "description": "未確認エリア【耽美主義者】で「垂直的な構造を讃える」選択肢を確認"
     },
     "caEridonaGlory": {
-      "title": "エリドナの栄光",
+      "title": "エリナドの栄光",
       "description": "カオス-【虚像の劇場】ですべての情報型選択肢、相互作用選択肢確認"
     },
     "caHiddenWork": {
@@ -279,6 +299,10 @@
     "caArtIsHard": {
       "title": "芸術は難しく、人生は短い",
       "description": "未確認エリア【演出家の台本】で「終末の脚本」を確認する"
+    },
+    "caVividThanBurningCity": {
+      "title": "燃ゆる都市より鮮明な",
+      "description": "未確認エリア【最後のフィナーレ】で「ジュリアン」と話す"
     },
     "caAllTragedy": {
       "title": "すべての悲劇は本心だった",
@@ -404,9 +428,29 @@
       "title": "ひどいアンコール",
       "description": "カオス-【虚像の劇場】30回クリア"
     },
-    "caTbd": {
-      "title": "アップデート予定です。",
-      "description": ""
+    "caInvitationBeyondMist": {
+      "title": "霧の向こうの招待状",
+      "description": "未確認エリア【演出家の台本】で霧の向こうの視線を受け入れる"
+    },
+    "caConductorFinale": {
+      "title": "フィナーレを指揮する者",
+      "description": "カオス【虚像の劇場】の混沌の核に到達した状態で6回クリア"
+    },
+    "caScriptVacantSeat": {
+      "title": "台本の向こうの空席",
+      "description": "未確認エリア【最後のフィナーレ】で「ジュリアンのメモ」を確認する"
+    },
+    "caUnscriptedEnding": {
+      "title": "台本にはない結末",
+      "description": "未確認エリア【最後のフィナーレ】で選択肢「ここで終わらせると言う」確認"
+    },
+    "caYouTooTheSame": {
+      "title": "あなたも同じですね",
+      "description": "テネブレアと一緒に未確認エリア【歪んだ恋心】で教徒たちから神物を奪う"
+    },
+    "caLoveIsALie": {
+      "title": "嘘はとびきりの愛",
+      "description": "テネブレアと一緒に未確認エリア【歪んだ恋心】で教徒に偽の痕跡を渡す"
     },
     "brEndCritique": {
       "title": "批評を終了する",
@@ -448,9 +492,13 @@
       "title": "英雄の悪夢",
       "description": "カオス【虚像の劇場】中心部で恨みの断罪者撃破"
     },
-    "brTbd": {
-      "title": "アップデート予定です。",
-      "description": ""
+    "brEncroachingBlackout": {
+      "title": "迫りくる暗転",
+      "description": "カオス【虚像の劇場】混沌の核で霧の中の女性が暗転を2回以上使用した後に完了"
+    },
+    "brArroganceRemnant": {
+      "title": "傲慢の残滓",
+      "description": "カオス【虚像の劇場】混沌の核で霧の中の女性撃破"
     },
     "anCb1": {
       "title": "星雲の歪み-【クルーエルボーン】撃破",
@@ -595,7 +643,8 @@
       "hidemarie": "【銀河に響く歌声】ハイデマリ",
       "perfect_method": "完璧なメソッド",
       "song_of_light_and_dark": "光と闇の歌",
-      "glory_of_eridona": "エリドナの栄光",
+      "glory_of_eridona": "エリナドの栄光",
+      "glory_of_elinad": "エリナドの栄光",
       "nameless_artist": "名もなき芸術家",
       "credit_collector": "クレジット収集家",
       "release_of_the_curtain_call": "カーテンコールの解放",
@@ -607,7 +656,14 @@
       "claras_wand": "クララのワンド",
       "adelheid": "アーデルハイト",
       "collapsed_elinad": "崩れたエリナド",
-      "collapsed_elinad_profile": "崩れたエリナドのプロフィール"
+      "collapsed_elinad_profile": "崩れたエリナドのプロフィール",
+      "aria_penlight": "アリアのペンライト",
+      "tenebrea_penlight": "テネブレアのペンライト",
+      "singing_voice_tenebrea": "銀河に響く歌声テネブレア",
+      "edinity_profile": "エディニティ号プロフィール",
+      "edinity": "エディニティ号",
+      "phantom_theater_profile": "虚像の劇場プロフィール",
+      "phantom_theater": "虚像の劇場"
     }
   }
 }
