@@ -532,6 +532,8 @@ export const seasons: Season[] = [
             titleKey: "tasks.caVividThanBurningCity.title",
             descriptionKey: "tasks.caVividThanBurningCity.description",
             isChild: true,
+            rewards: [rewardOf("flawless_melody", 200)],
+            progressMax: 1,
           },
           {
             id: "ca-script-vacant-seat",

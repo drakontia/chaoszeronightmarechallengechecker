@@ -75,4 +75,20 @@ describe("season 3 second-half placeholder replacements", () => {
       "rewards.season3.phantom_theater",
     ]);
   });
+
+  test("defines vivid-than-burning-city with requested details", () => {
+    const byId = new Map(tasks.map((task) => [task.id, task]));
+    const vivid = byId.get("ca-vivid-than-burning-city");
+
+    expect(vivid?.isChild).toBe(true);
+    expect(vivid?.descriptionKey).toBe("tasks.caVividThanBurningCity.description");
+    expect(vivid?.progressMax ?? 1).toBe(1);
+    expect(vivid?.rewards).toEqual([
+      {
+        image: "/rewards/season3/flawless_melody.png",
+        altKey: "rewards.season3.flawless_melody",
+        amount: 200,
+      },
+    ]);
+  });
 });
